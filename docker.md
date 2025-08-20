@@ -1,10 +1,6 @@
-## View occupied space
+# C
 
-```bash
-docker system df
-```
-
-## Unnecessary space cleanup
+## Cleanup nnnecessary space
 
 ```bash
   yes | docker system prune
@@ -13,17 +9,7 @@ docker system df
   docker volume ls -f dangling=true | awk 'NR > 1 {print $2}' | xargs docker volume rm
 ```
 
-## Reboot Docker
-
-```bash
-  sudo systemctl daemon-reload && sudo systemctl restart docker
-```
-
-## View names of running containers
-
-```bash
-docker ps -q | xargs -n1 docker inspect --format '{{.Name}}'
-```
+# K
 
 ## Kill running containers
 
@@ -31,4 +17,26 @@ docker ps -q | xargs -n1 docker inspect --format '{{.Name}}'
 running_containers=$(docker ps -aq)
 docker container kill $running_containers
 docker container rm   $running_containers
+```
+
+# R
+
+## Reboot Docker
+
+```bash
+  sudo systemctl daemon-reload && sudo systemctl restart docker
+```
+
+# V
+
+## View names of running containers
+
+```bash
+docker ps -q | xargs -n1 docker inspect --format '{{.Name}}'
+```
+
+## View occupied space
+
+```bash
+docker system df
 ```

@@ -1,4 +1,6 @@
-## Measure bandwidth
+# B
+
+## Bandwidth measurement
 
 Server (IP:192.168.0.2)
 
@@ -14,7 +16,9 @@ Client
 iperf3 -c 192.168.0.2 -P 4 -t 30 -i 1
 ```
 
-### Exchange a file
+# F
+
+## File exchange
 
 Receiver (IP:192.168.0.2)
 
