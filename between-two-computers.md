@@ -24,12 +24,12 @@ Receiver (IP:192.168.0.2)
 
 ```bash
 # netcat -l PORT > FILE, e.g.:
-netcat -l 1234 > file.txt
+netcat -l 1234 > file_rx.txt
 ```
 
 Transmitter
 
 ```bash
-# netcat RX_IP PORT -q 0, e.g.:
-netcat 192.168.0.2 -q 0
+# cat file.txt | netcat RX_IP PORT -q 0, e.g.:
+cat file_tx.txt | netcat 192.168.0.2 -q 0
 ```
