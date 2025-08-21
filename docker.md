@@ -1,6 +1,6 @@
 # C
 
-## Cleanup nnnecessary space
+## Cleanup unnecessary space
 
 ```bash
   yes | docker system prune
