@@ -31,5 +31,5 @@ Transmitter
 
 ```bash
 # cat file.txt | netcat RX_IP PORT -q 0, e.g.:
-cat file_tx.txt | netcat 192.168.0.2 -q 0
+cat file_tx.txt | netcat 192.168.0.2 1234 -q 0
 ```
