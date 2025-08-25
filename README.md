@@ -1,6 +1,6 @@
-# [Between two computers](between-to-computers.md)
-- [Bandwidth measurement](between-to-computers.md#bandwidth-measurement)
-- [File exchange](between-to-computers.md#file-exchange)
+# [Between two computers](between-two-computers.md)
+- [Bandwidth measurement](between-two-computers.md#bandwidth-measurement)
+- [File exchange](between-two-computers.md#file-exchange)
 
 # [Docker](docker.md)
 - [Cleanup unnecessary space](docker.md#cleanup-unnecessary-space)
