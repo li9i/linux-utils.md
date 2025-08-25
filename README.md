@@ -1,9 +1,10 @@
-# [Between two computers](#between-to-computers.md)
-  - Bandwidth measurement
-  - File exchange
-# [Docker](#docker.md)
-  - Cleanup unnecessary space
-  - Kill running containers
-  - Reboot Docker
-  - View names of running containers
-  - View occupied space
+# [Between two computers](between-to-computers.md)
+- [Bandwidth measurement](between-to-computers.md#bandwidth-measurement)
+- [File exchange](between-to-computers.md#file-exchange)
+
+# [Docker](docker.md)
+- [Cleanup unnecessary space](docker.md#cleanup-unnecessary-space)
+- [Kill running containers](docker.md#kill-running-containers)
+- [Reboot Docker](docker.md#reboot-docker)
+- [View names of running containers](docker.md#view-names-of-running-containers)
+- [View occupied space](docker.md#view-occupied-space)
