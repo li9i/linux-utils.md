@@ -23,11 +23,18 @@ iperf3 -c 192.168.0.2 -P 4 -t 30 -i 1
 Receiver (IP:192.168.0.2)
 
 ```bash
-# netcat -l PORT > FILE, e.g.:
-netcat -l 1234 > file_rx.txt
+# netcat -l -p PORT > FILE, e.g.:
+netcat -l -p 1234 > file_rx.txt
 ```
 
 Transmitter
+
+```bash
+# nc RX_IP PORT -q 0 < file_tx.file
+netcat 192.168.0.2 1234 -q 0 < file_tx.txt
+```
+
+or
 
 ```bash
 # cat file.txt | netcat RX_IP PORT -q 0, e.g.:
