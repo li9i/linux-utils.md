@@ -14,3 +14,6 @@ Notes on sweet commands/utilities in linux
 - [Reboot Docker](docker.md#reboot-docker)
 - [View names of running containers](docker.md#view-names-of-running-containers)
 - [View occupied space](docker.md#view-occupied-space)
+
+## [Search](search.md)
+- [Grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
