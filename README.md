@@ -19,7 +19,7 @@ Notes on sweet commands/utilities in linux
 - [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
 
 ## [git](git.md)
-- [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-<branch-b>-to-<branch-a>)
+- [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
 - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
 - [Push by specifying key location](git.md#push-by-specifying-key-location)
 - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
