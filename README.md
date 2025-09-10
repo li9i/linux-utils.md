@@ -16,7 +16,7 @@ Notes on sweet commands/utilities in linux
 - [View occupied space](docker.md#view-occupied-space)
 
 ## [General](general.md)
-- [List installed packages in chronological order](general.md#list-installed-packages in-chronological-order-ascending)
+- [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
 
 ## [git](git.md)
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-<branch-b>-to-<branch-a>)
