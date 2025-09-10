@@ -15,5 +15,8 @@ Notes on sweet commands/utilities in linux
 - [View names of running containers](docker.md#view-names-of-running-containers)
 - [View occupied space](docker.md#view-occupied-space)
 
+## [ROS 2](ros2.md)
+- [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
+
 ## [Search](search.md)
 - [Grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
