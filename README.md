@@ -5,7 +5,8 @@ Notes on sweet commands/utilities in linux
 ## [Between two computers](between-two-computers.md)
 
 - [Measure bandwidth](between-two-computers.md#bandwidth-measurement)
-- [Exchange files](between-two-computers.md#file-exchange)
+- [Exchange files (netcat)](between-two-computers.md#file-exchange-simple-for-one-off-type-of-situations)
+- [Exchange files (copyparty)](between-two-computers.md#file-exchange-heavyweight)
 
 ## [Docker](docker.md)
 
@@ -33,3 +34,4 @@ Notes on sweet commands/utilities in linux
 
 ## [Search](search.md)
 - [Grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
+- [Grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
