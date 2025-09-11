@@ -18,7 +18,7 @@ iperf3 -c 192.168.0.2 -P 4 -t 30 -i 1
 
 # F
 
-## File exchange
+## File exchange (simple; for one-off type of situations)
 
 Receiver (IP:192.168.0.2)
 
@@ -40,3 +40,7 @@ or
 # cat file.txt | netcat RX_IP PORT -q 0, e.g.:
 cat file_tx.txt | netcat 192.168.0.2 1234 -q 0
 ```
+
+## File exchange (heavyweight)
+
+Use [9001/copyparty](https://github.com/9001/copyparty?tab=readme-ov-file#quickstart) as a file server
