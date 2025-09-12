@@ -16,6 +16,17 @@ Client
 iperf3 -c 192.168.0.2 -P 4 -t 30 -i 1
 ```
 
+# D
+
+## Discover others in subnet
+
+Say you sit at a pc with IP address `192.168.0.200` and you need to identify which devices it can reach in its subnet:
+
+```bash
+# Scan the entire subnet, i.e. look under 192.168.0.1--192.168.0.255
+nmap -sn 192.168.0.0/24
+```
+
 # F
 
 ## File exchange (simple; for one-off type of situations)
