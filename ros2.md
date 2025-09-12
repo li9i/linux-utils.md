@@ -1,3 +1,11 @@
+# E
+
+## Echo field of message
+
+```bash
+ros2 topic echo --once /stereo/right/image_rect --field header.stamp
+```
+
 # S
 
 ## Save map published at custom topic

@@ -31,6 +31,7 @@ Notes on sweet commands/utilities in linux
 - [View ignored files](git.md#view-ignored-files)
 
 ## [ROS 2](ros2.md)
+- [Echo specific field of message](ros2.md#echo-field-of-message)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
 
 ## [Search](search.md)
