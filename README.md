@@ -28,6 +28,7 @@ Notes on sweet commands/utilities in linux
 - [Squash commits before pushing](git.md#squash-commits-before-pushing)
 - [Squash commits during merge](git.md#squash-commits-during-merge)
 - [View file modifications](git.md#view-file-modifications)
+- [View ignored files](git.md#view-ignored-files)
 
 ## [ROS 2](ros2.md)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
