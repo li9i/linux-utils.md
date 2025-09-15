@@ -17,6 +17,21 @@ git cherry-pick abc123
 GIT_SSH_COMMAND='ssh -i /path/to/private_key' git fetch origin
 ```
 
+# L
+
+## List files modified or yet untracked
+
+```bash
+git status --porcelain | awk '{print $2}'
+```
+
+If you add the following to `~/.gitconfig` then issuing `git files` will constitute an abbreviation
+
+```gitignore
+[alias]
+    files = "!git status --porcelain | awk '{print $2}'"
+```
+
 # P
 
 ## Push by specifying key location
