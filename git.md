@@ -25,11 +25,11 @@ GIT_SSH_COMMAND='ssh -i /path/to/private_key' git fetch origin
 git status --porcelain | awk '{print $2}'
 ```
 
-If you add the following to `~/.gitconfig` then issuing `git files` will constitute an abbreviation
+If you add the following to `~/.gitconfig` then issuing `git changed-files` will constitute an abbreviation
 
 ```gitignore
 [alias]
-    files = "!git status --porcelain | awk '{print $2}'"
+    changed-files = "!git status --porcelain | awk '{print $2}'"
 ```
 
 # P
