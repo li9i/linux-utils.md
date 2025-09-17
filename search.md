@@ -18,3 +18,12 @@ find . -type f -name "docker-compose*" -exec grep "sensors" {} +
 string="GetBase"
 grep -rEIn "$string" . | grep -o "\w*$string\w*" | sort -u
 ```
+
+## grep for string and show k preceding, n succeeding lines
+
+```bash
+string="GetBase"
+k=5
+n=5
+grep -rEIn -A $k -B $n $string
+```

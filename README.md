@@ -38,3 +38,4 @@ Notes on sweet commands/utilities in linux
 ## [Search](search.md)
 - [Grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
 - [Grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
+- [Grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-preceding-succeeding-lines)
