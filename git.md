@@ -42,8 +42,8 @@ Useful when you need to merge changes but not incorporate all of them
 # Switch to target branch (e.g. master)
 git checkout target-branch
 
-# Merge but don't commit yet
-git merge --no-commit source-branch
+# Merge but don't commit yet. The use of --no-ff is essential
+git merge --no-commit --no-ff source-branch
 
 # Reset a specific file to its state before merge
 git checkout HEAD -- path/to/file.txt
