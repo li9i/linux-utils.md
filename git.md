@@ -1,5 +1,29 @@
 # C
 
+## Configuration of keys for different repos
+
+```bash
+$ cat .ssh/config
+
+# Check the Host line
+# Then the remote origin url should be modified from, e.g.
+# git@github.com:epfl-lasa/robetarme_ros2_wp5.2.git
+# to
+# git@github.com-robetarme-user:epfl-lasa/robetarme_ros2_wp5.2.git
+Host github.com-robetarme-user
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/robetarme_passphraseless_key
+  IdentitiesOnly yes
+
+# Default identity
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_iti581_github
+  IdentitiesOnly yes
+```
+
 ## Copy commit from `<branch-b>` to `<branch-a>`
 
 Let the commit in question have hash `abc123`. Then
@@ -50,6 +74,12 @@ git checkout HEAD -- path/to/file.txt
 
 # Now commit the merge
 git commit -m "Merge source-branch, excluding changes to file.txt"
+```
+
+Then discard the changes in files you don't need with
+
+```bash
+git checkout HEAD -- <file-paths>
 ```
 
 # P

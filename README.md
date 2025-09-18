@@ -20,6 +20,7 @@ Notes on sweet commands/utilities in linux
 - [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
 
 ## [git](git.md)
+- [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
 - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
