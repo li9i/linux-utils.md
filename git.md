@@ -4,7 +4,9 @@
 
 ```bash
 $ cat .ssh/config
+```
 
+```bash
 # Check the Host line
 # Then the remote origin url should be modified from, e.g.
 # git@github.com:epfl-lasa/robetarme_ros2_wp5.2.git
