@@ -78,11 +78,13 @@ git checkout HEAD -- path/to/file.txt
 git commit -m "Merge source-branch, excluding changes to file.txt"
 ```
 
-Then discard the changes in files you don't need with
+Unstage everything
 
 ```bash
-git checkout HEAD -- <file-paths>
+git reset
 ```
+
+Then you may keep the files that you need and discard the rest.
 
 # P
 
