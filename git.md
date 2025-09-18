@@ -32,6 +32,26 @@ If you add the following to `~/.gitconfig` then issuing `git changed-files` will
     changed-files = "!git status --porcelain | awk '{print $2}'"
 ```
 
+# M
+
+## Merge branch but don't commit changes yet
+
+Useful when you need to merge changes but not incorporate all of them
+
+```bash
+# Switch to target branch (e.g. master)
+git checkout target-branch
+
+# Merge but don't commit yet
+git merge --no-commit source-branch
+
+# Reset a specific file to its state before merge
+git checkout HEAD -- path/to/file.txt
+
+# Now commit the merge
+git commit -m "Merge source-branch, excluding changes to file.txt"
+```
+
 # P
 
 ## Push by specifying key location

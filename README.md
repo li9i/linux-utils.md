@@ -23,6 +23,7 @@ Notes on sweet commands/utilities in linux
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
 - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
+- [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
 - [Push by specifying key location](git.md#push-by-specifying-key-location)
 - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
