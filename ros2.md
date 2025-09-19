@@ -6,6 +6,14 @@
 ros2 topic echo --once /stereo/right/image_rect --field header.stamp
 ```
 
+# P
+
+## Publish static transform on the fly
+
+```bash
+ros2 run tf2_ros static_transform_publisher X Y Z ROLL PITCH YAW PARENT_FRAME CHILD_FRAME
+```
+
 # S
 
 ## Save map published at custom topic
