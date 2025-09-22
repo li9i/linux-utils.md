@@ -184,6 +184,16 @@ This does not create a merge commit. Instead it stages all the changes from <bra
 git commit -m "A single commit message summarizing all changes between <branch> and master"
 ```
 
+
+
+# U
+
+## Unstage everything after `add`
+
+```bash
+git reset
+```
+
 # V
 
 ## View file modifications
