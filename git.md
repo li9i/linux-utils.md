@@ -1,3 +1,13 @@
+# A
+
+## Add everything except untracked files
+
+If you need to `add` everything except untracked files, i.e. only update changes to files that are already tracked
+
+```bash
+git add -u # --update
+```
+
 # C
 
 ## Configuration of keys for different repos
