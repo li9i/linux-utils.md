@@ -18,7 +18,7 @@ Notes on sweet commands/utilities in linux
 
 ## [General](general.md)
 - [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
-- [Automated Password Generator](general.md#automated-password-generator)
+- [Generate Passwords with the Automated Password Generator](general.md#automated-password-generator)
 
 ## [git](git.md)
 - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
