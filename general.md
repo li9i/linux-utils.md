@@ -8,7 +8,7 @@ zcat -f /var/log/dpkg.log* 2>/dev/null | grep " install " | awk '{print $1, $2, 
 
 # P
 
-## Generate passwords with the Automated Password Generator
+## Generate passwords
 
 ```bash
 apg -a 1 -n 5 -m 16 -x 20 -E O0l1I -M SNCL
