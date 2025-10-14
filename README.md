@@ -2,6 +2,10 @@
 
 Notes on sweet commands/utilities in linux
 
+## [Audio](audio.md)
+
+- [Extract audio from video](audio.md#extract-audio-from-video)
+
 ## [Between two computers](between-two-computers.md)
 
 - [Measure bandwidth](between-two-computers.md#bandwidth-measurement)
