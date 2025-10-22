@@ -27,3 +27,8 @@ k=5
 n=5
 grep -rEIn -A $k -B $n $string
 ```
+## grep for string in files and open each one in separate window
+
+```bash
+grep -rl "string to search" | xargs -n1 gvim
+```
