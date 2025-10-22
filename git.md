@@ -150,8 +150,8 @@ git commit -m "Revert multiple commits: description of changes"
 ### Commits are scattered
 
 ```bash
-# Revert specific commits (in chronological order - oldest first)
-git revert --no-commit COMMIT_HASH_1 COMMIT_HASH_2 COMMIT_HASH_3
+# Revert specific commits (in reverse chronological order - latest first)
+git revert --no-commit COMMIT_HASH_n COMMIT_HASH_n-1 ... COMMIT_HASH_n-k
 
 git commit -m "Revert specific commits"
 ```
