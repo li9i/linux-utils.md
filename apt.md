@@ -3,8 +3,10 @@
 ## Split `apt-get install` to download stage and install stage
 
 ```bash
-# Stage 1: Download package + dependencies
+# Optional
 sudo apt-get update
+
+# Stage 1: Download package + dependencies
 sudo apt-get install --download-only <package-name>
 
 # Stage 2: Install without downloading
