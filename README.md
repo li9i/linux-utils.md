@@ -12,7 +12,8 @@ Notes on sweet commands/utilities in linux
 
 ## [Between two computers](between-two-computers.md)
 
-- [Measure bandwidth](between-two-computers.md#bandwidth-measurement)
+- [Bandwidth Measurement](between-two-computers.md#bandwidth-measurement)
+- [Bridge Networks](between-two-computers.md#bridge-networks)
 - [Exchange files (netcat)](between-two-computers.md#file-exchange-simple-for-one-off-type-of-situations)
 - [Exchange files (copyparty)](between-two-computers.md#file-exchange-heavyweight)
 

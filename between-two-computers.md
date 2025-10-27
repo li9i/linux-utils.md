@@ -16,6 +16,46 @@ Client
 iperf3 -c 192.168.0.2 -P 4 -t 30 -i 1
 ```
 
+## Bridge networks
+
+Setup: Two computers: M and S. M has two network cards but S only one. M's interface `eno1` has access to the internet. S's interface `eth0` is connected to M's second interface, `enp1s0`. The goal is to make S have access to the internet.
+
+
+### Execute at M
+
+```bash
+# Ensure forwarding
+sudo sysctl -w net.ipv4.ip_forward=1
+
+
+# Allow forwarding between interfaces (explicitly)
+sudo iptables -A FORWARD -i enp1s0 -o eno1 -j ACCEPT
+sudo iptables -A FORWARD -i eno1 -o enp1s0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+sudo iptables -t nat -A POSTROUTING -o eno1 -j MASQUERADE
+```
+
+#### Revert with
+
+```bash
+sudo sysctl -w net.ipv4.ip_forward=0
+sudo iptables -F
+sudo iptables -t nat -F
+
+# or simply reboot
+```
+
+#### And to make changes persist
+
+```bash
+# Make IP forwarding permanent
+echo 'net.ipv4.ip_forward=1' | sudo tee -a /etc/sysctl.conf
+
+# Save iptables rules
+sudo apt install iptables-persistent -y
+sudo iptables-save | sudo tee /etc/iptables/rules.v4
+```
+
 # D
 
 ## Discover others in subnet
