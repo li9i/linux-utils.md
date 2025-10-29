@@ -115,6 +115,43 @@ GIT_SSH_COMMAND='ssh -i /path/to/private_key' git push origin main
 
 # R
 
+## Rebase and automatically accept changes from branch
+
+It is possible to resolve `rebase` conflicts automatically by favouring the changes from branch `b` (the branch being rebased) over those from `master` (the base branch, the branch onto which `b` is rebased). However, Git doesn’t do this by default; you need to explicitly instruct it. During a `rebase` with conflicts, Git pauses and asks you to resolve them. If you want to automatically accept all changes from branch `b` (i.e., `ours` in the context of a `rebase`) you can use:
+
+```bash
+git checkout --theirs -- .
+```
+
+> [!CAUTION]
+> During a rebase the meanings of `ours` and `theirs` are reversed compared to a merge:
+> 
+> - `ours` refers to the incoming base (i.e., `master`, the branch you're rebasing onto).
+> - `theirs` refers to the current commit from branch `b` (the one being replayed).
+
+After running the above command in the conflicted directory (or for specific files), stage the resolved files:
+
+```bash
+git add .
+```
+
+Then continue the rebase:
+
+```bash
+git rebase --continue
+```
+
+If you want to do this non-interactively for the entire `rebase`, you can pass a strategy option before the `rebase` starts:
+
+```bash
+git rebase -X theirs master
+```
+
+This tells Git to automatically prefer the changes from branch `b` (the `theirs` side during `rebase`) whenever conflicts occur.
+
+> [!CAUTION]
+> Use this with caution: automatically discarding changes from `master` may unintentionally remove important updates.
+
 ## Remove changes introduced by commit
 
 ### Create a New Commit That Undoes It (`git revert`)
@@ -202,8 +239,6 @@ This does not create a merge commit. Instead it stages all the changes from <bra
 ```bash
 git commit -m "A single commit message summarizing all changes between <branch> and master"
 ```
-
-
 
 # U
 
