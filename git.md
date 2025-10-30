@@ -150,7 +150,7 @@ git rebase -X theirs master
 This tells Git to automatically prefer the changes from branch `b` (the `theirs` side during `rebase`) whenever conflicts occur.
 
 > [!CAUTION]
-> Use this with caution: automatically discarding changes from `master` may unintentionally remove important updates.
+> Automatically discarding changes from `master` may unintentionally remove important updates.
 
 ## Remove changes introduced by commit
 
