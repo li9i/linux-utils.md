@@ -14,6 +14,7 @@ Notes on sweet commands/utilities in linux
 
 - [Bandwidth Measurement](between-two-computers.md#bandwidth-measurement)
 - [Bridge Networks](between-two-computers.md#bridge-networks)
+- [Discover others in subnet](between-two-computers.md#discover-others-in-subnet)
 - [Exchange files (netcat)](between-two-computers.md#file-exchange-simple-for-one-off-type-of-situations)
 - [Exchange files (copyparty)](between-two-computers.md#file-exchange-heavyweight)
 
@@ -49,10 +50,12 @@ Notes on sweet commands/utilities in linux
 
 ## [ROS 2](ros2.md)
 - [Echo specific field of message](ros2.md#echo-field-of-message)
+- [Migrate signing key](ros2.md@migrate.signing-key)
 - [Publish static transform on the fly](ros2.md#publish-static-transform-on-the-fly)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
 
 ## [Search](search.md)
-- [Grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
-- [Grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
-- [Grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
+- [grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
+- [grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
+- [grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
+- [grep for string in files and open each one in separate window](search.md#grep-for-string-in-files-and-open-each-one-in-separate-window)
