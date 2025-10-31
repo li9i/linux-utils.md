@@ -29,6 +29,7 @@ Notes on sweet commands/utilities in linux
 ## [General](general.md)
 - [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
 - [Generate Passwords](general.md#generate-passwords)
+- [Vim: enable backup, undo, swap](general.md#vim-enable-backup-undo-swap)
 
 ## [git](git.md)
 - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
