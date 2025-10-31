@@ -20,6 +20,19 @@ Generate `n=5` passwords
 - `E`xclude ambiguous chars
 - `M`ix `S`pecial chars, `N`umbers, `C`apital letters, `L`owercase letters
 
+# R
+
+## Run something once on boot
+
+```bash
+crontab -e
+```
+e.g. restart Docker container abc 10 sec after boot
+```bash
+# @reboot applies to both `shutdown -h` and `-r`
+@reboot sleep 10; docker container restart abc
+```
+
 # V
 
 ## Vim: enable backup, undo, swap

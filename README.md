@@ -27,11 +27,14 @@ Notes on sweet commands/utilities in linux
 - [View occupied space](docker.md#view-occupied-space)
 
 ## [General](general.md)
+
 - [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
 - [Generate Passwords](general.md#generate-passwords)
+- [Run something once on boot](general.md#run-something-once-on-boot)
 - [Vim: enable backup, undo, swap](general.md#vim-enable-backup-undo-swap)
 
 ## [git](git.md)
+
 - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
 - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
@@ -50,12 +53,14 @@ Notes on sweet commands/utilities in linux
 - [View ignored files](git.md#view-ignored-files)
 
 ## [ROS 2](ros2.md)
+
 - [Echo specific field of message](ros2.md#echo-field-of-message)
 - [Migrate signing key](ros2.md@migrate.signing-key)
 - [Publish static transform on the fly](ros2.md#publish-static-transform-on-the-fly)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
 
 ## [Search](search.md)
+
 - [grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
 - [grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
 - [grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
