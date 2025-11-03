@@ -11,5 +11,5 @@
 ## Download video but extract only audio
 
 ```bash
-./yt-dlp_linux_2025.09.26  -x --audio-format mp3  -f bestvideo+bestaudio  -f bestaudio    https://www.youtube.com/playlist?list=FLuPecOb2Lir66VCmnN2eDjQ
+./yt-dlp_linux  -x --audio-format mp3  -f bestvideo+bestaudio  -f bestaudio    https://www.youtube.com/playlist?list=FLuPecOb2Lir66VCmnN2eDjQ
 ```
