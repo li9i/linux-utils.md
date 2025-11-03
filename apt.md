@@ -1,6 +1,6 @@
 # S
 
-## Split `apt-get install` to download stage and install stage
+## Split `apt-get install` to `download` stage and `install` stage
 
 ```bash
 # Optional
