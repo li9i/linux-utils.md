@@ -67,3 +67,8 @@ Notes on sweet commands/utilities in linux
 - [grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
 - [grep for string in files and open each one in separate window](search.md#grep-for-string-in-files-and-open-each-one-in-separate-window)
 - [grep for string and exclude lines containing specific words](search.md#grep-for-string-and-exclude-lines-containing-specific-words)
+
+## [YouTube](youtube.md)
+
+- [Download video](youtube.md#download-video)
+- [Download video but extract only audio](youtube.md#download-video-but-extract-only-audio)
