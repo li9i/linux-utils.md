@@ -4,7 +4,7 @@ Notes on sweet commands/utilities in linux
 
 ## [APT](apt.md)
 
-- [Split `apt-get install` to download stage and install stage](apt.md#split-apt-get-install-to-download-stage-and-install-stage)
+- [Split `apt-get install` to `download` stage and `install` stage](apt.md#split-apt-get-install-to-download-stage-and-install-stage)
 
 ## [Audio](audio.md)
 
