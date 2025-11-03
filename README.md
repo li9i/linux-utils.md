@@ -31,6 +31,7 @@ Notes on sweet commands/utilities in linux
 - [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
 - [Generate Passwords](general.md#generate-passwords)
 - [Run something once on boot](general.md#run-something-once-on-boot)
+- [Suppress lines of output on command line](general.md#suppress-lines-of-output-on-command-line)
 - [Vim: enable backup, undo, swap](general.md#vim-enable-backup-undo-swap)
 
 ## [git](git.md)
@@ -65,3 +66,4 @@ Notes on sweet commands/utilities in linux
 - [grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
 - [grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
 - [grep for string in files and open each one in separate window](search.md#grep-for-string-in-files-and-open-each-one-in-separate-window)
+- [grep for string and exclude lines containing specific words](search.md#grep-for-string-and-exclude-lines-containing-specific-words)

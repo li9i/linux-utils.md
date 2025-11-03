@@ -27,8 +27,15 @@ k=5
 n=5
 grep -rEIn -A $k -B $n $string
 ```
+
 ## grep for string in files and open each one in separate window
 
 ```bash
 grep -rl "string to search" | xargs -n1 gvim
+```
+
+## grep for string and exclude lines containing specific words
+
+```bash
+grep -rEIn "sensors" -v -e EXCLUDE_PATTERN_1 -e EXCLUDE_PATTERN_2
 ```
