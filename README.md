@@ -16,6 +16,7 @@ Notes on sweet commands/utilities in linux
 - [Bridge Networks](between-two-computers.md#bridge-networks)
 - [Discover others in subnet](between-two-computers.md#discover-others-in-subnet)
 - [Exchange files (netcat)](between-two-computers.md#file-exchange-simple-for-one-off-type-of-situations)
+- [Exchange files (python)](between-two-computers.md#file-exchange-lightweight)
 - [Exchange files (copyparty)](between-two-computers.md#file-exchange-heavyweight)
 
 ## [Docker](docker.md)
