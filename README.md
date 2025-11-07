@@ -5,15 +5,15 @@ Notes on sweet commands/utilities in linux
 Table of Contents
 =================
 
-* [APT](apt)
-* [Audio](audio)
-* [Between two computers](between-two-computers)
-* [Docker](docker)
-* [General](general)
-* [git](git)
-* [ROS 2](ros-2)
-* [Search](search)
-* [YouTube](youtube)
+* [APT](#apt)
+* [Audio](#audio)
+* [Between two computers](#between-two-computers)
+* [Docker](#docker)
+* [General](#general)
+* [git](#git)
+* [ROS 2](#ros-2)
+* [Search](#search)
+* [YouTube](#youtube)
 
 
 ## [APT](apt.md)
