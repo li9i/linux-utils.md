@@ -55,7 +55,7 @@ Table of Contents
 - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
 - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
-- [Forgot to add file to latest commit and realised before pushing?](git.md#forgot-to-add-file-to-latest-commit-and-realised-before-pushing)
+- [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
 - [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
 - [Push by specifying key location](git.md#push-by-specifying-key-location)
