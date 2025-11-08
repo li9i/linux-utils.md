@@ -1,11 +1,3 @@
-# L
-
-## List installed packages in chronological order (ascending)
-
-```bash
-zcat -f /var/log/dpkg.log* 2>/dev/null | grep " install " | awk '{print $1, $2, $4}' | sort
-```
-
 # P
 
 ## Generate passwords
@@ -43,15 +35,15 @@ e.g. restart Docker container abc 10 sec after boot
 Say you run a command which yields lines that clutter your overview of the output, e.g.
 
 ```bash
-roslaunch vdbfusion_ros vdbfusion_mapping_irr_real_v2.launch 
+roslaunch vdbfusion_ros vdbfusion_mapping_irr_real_v2.launch
 [...]
-I1103 09:05:33.363229   622 transform.cpp:65] Transformer init success                                                                                                                                                                   
-I1103 09:05:33.373440   622 vdbfusion_mapper.cpp:403] ==========> Setting Config Success, start for running                                                                                                                              
-Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame camera (parent laser_camera) at time 1762160733.659102 according to authority unknown_publisher                                                               
-         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp                                                                                                                                                         
-Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame camera (parent laser_camera) at time 1762160733.659102 according to authority unknown_publisher                                                               
-         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp                                                                                                                                                         
-Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame camera (parent laser_camera) at time 1762160733.659102 according to authority unknown_publisher 
+I1103 09:05:33.363229   622 transform.cpp:65] Transformer init success
+I1103 09:05:33.373440   622 vdbfusion_mapper.cpp:403] ==========> Setting Config Success, start for running
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame camera (parent laser_camera) at time 1762160733.659102 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame camera (parent laser_camera) at time 1762160733.659102 according to authority unknown_publisher
+         at line 277 in /tmp/binarydeb/ros-noetic-tf2-0.7.10/src/buffer_core.cpp
+Warning: TF_REPEATED_DATA ignoring data with redundant timestamp for frame camera (parent laser_camera) at time 1762160733.659102 according to authority unknown_publisher
 ```
 
 You may suppress lines containing the words `TF_REPEATED_DATA` and `buffer_core` by appending to the command `2> >(grep -v -e PATTERN1 -e PATTERN2 ...)`:

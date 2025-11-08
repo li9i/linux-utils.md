@@ -18,6 +18,7 @@ Table of Contents
 
 ## [APT](apt.md)
 
+- [List installed packages in chronological order](apt.md#list-installed-packages-in-chronological-order-ascending)
 - [Split `apt-get install` to `download` stage and `install` stage](apt.md#split-apt-get-install-to-download-stage-and-install-stage)
 
 ## [Audio](audio.md)
@@ -43,7 +44,6 @@ Table of Contents
 
 ## [General](general.md)
 
-- [List installed packages in chronological order](general.md#list-installed-packages-in-chronological-order-ascending)
 - [Generate Passwords](general.md#generate-passwords)
 - [Run something once on boot](general.md#run-something-once-on-boot)
 - [Suppress lines of output on command line](general.md#suppress-lines-of-output-on-command-line)
