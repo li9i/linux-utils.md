@@ -49,5 +49,5 @@ ros2 run nav2_map_server map_saver_cli -f $MAP_SAVE_FILEPATH -t MAP_TOPIC_TO_SAV
 Echo every `10`th message in topic `/topic_name`
 
 ```bash
-ros2 topic echo /topic_name | awk 'BEGIN{RS="---\n"} NR % `10 == 1 {print; printf "---\n"}'
+ros2 topic echo /topic_name | awk 'BEGIN{RS="---\n"} NR % 10 == 1 {print; printf "---\n"}'
 ```
