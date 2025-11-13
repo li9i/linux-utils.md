@@ -74,6 +74,7 @@ Table of Contents
 - [Migrate signing key](ros2.md@migrate.signing-key)
 - [Publish static transform on the fly](ros2.md#publish-static-transform-on-the-fly)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
+- [Throttle ros2 topic echo frequency](ros2.md#throttle-ros2-topic-echo-frequency)
 
 ## [Search](search.md)
 

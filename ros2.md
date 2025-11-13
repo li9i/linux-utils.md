@@ -13,7 +13,7 @@ ros2 topic echo --once /stereo/right/image_rect --field header.stamp
 ```bash
 sudo rm /usr/share/keyrings/ros-archive-keyring.gpg
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
-sudo rm /etc/apt/sources.list.d/ros2.list 
+sudo rm /etc/apt/sources.list.d/ros2.list
 sudo rm /usr/share/keyrings/ros-archive-keyring.gpg
 ```
 
@@ -40,4 +40,14 @@ or, thoroughly:
 
 ```bash
 ros2 run nav2_map_server map_saver_cli -f $MAP_SAVE_FILEPATH -t MAP_TOPIC_TO_SAVE --occ 0.65 --free 0.196 --ros-args -p map_subscribe_transient_local:=true
+```
+
+# T
+
+## Throttle ros2 topic echo frequency
+
+Echo every `10`th message in topic `/topic_name`
+
+```bash
+ros2 topic echo /topic_name | awk 'BEGIN{RS="---\n"} NR % `10 == 1 {print; printf "---\n"}'
 ```
