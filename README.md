@@ -5,18 +5,18 @@ Notes on sweet commands/utilities in linux
 Table of Contents
 =================
 
-* [APT](#apt)
+* [`apt`](#apt)
 * [Audio](#audio)
 * [Between two computers](#between-two-computers)
 * [Docker](#docker)
 * [General](#general)
-* [git](#git)
+* [`git`](#git)
 * [ROS 2](#ros-2)
 * [Search](#search)
 * [Vim](#vim)
 * [YouTube](#youtube)
 
-## [APT](apt.md)
+## [`apt`](apt.md)
 
 - [List installed packages in chronological order](apt.md#list-installed-packages-in-chronological-order-ascending)
 - [Split `apt-get install` to `download` stage and `install` stage](apt.md#split-apt-get-install-to-download-stage-and-install-stage)
@@ -48,7 +48,7 @@ Table of Contents
 - [Run something once on boot](general.md#run-something-once-on-boot)
 - [Suppress lines of output on command line](general.md#suppress-lines-of-output-on-command-line)
 
-## [git](git.md)
+## [`git`](git.md)
 
 - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
@@ -75,20 +75,20 @@ Table of Contents
 
 ## [ROS 2](ros2.md)
 
-- [colcon](ros2.md#colcon)
-- [Echo specific field of message](ros2.md#echo-field-of-message)
+- [`colcon`](ros2.md#colcon)
+- [`ros2 topic echo` specific field of message](ros2.md#echo-field-of-message)
 - [Migrate signing key](ros2.md@migrate.signing-key)
 - [Publish static transform on the fly](ros2.md#publish-static-transform-on-the-fly)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
-- [Throttle ros2 topic echo frequency](ros2.md#throttle-ros2-topic-echo-frequency)
+- [Throttle `ros2 topic echo` frequency](ros2.md#throttle-ros2-topic-echo-frequency)
 
 ## [Search](search.md)
 
-- [grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
-- [grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
-- [grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
-- [grep for string in files and open each one in separate window](search.md#grep-for-string-in-files-and-open-each-one-in-separate-window)
-- [grep for string and exclude lines containing specific words](search.md#grep-for-string-and-exclude-lines-containing-specific-words)
+- [`grep` for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
+- [`grep` for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
+- [`grep` for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
+- [`grep` for string in files and open each one in separate window](search.md#grep-for-string-in-files-and-open-each-one-in-separate-window)
+- [`grep` for string and exclude lines containing specific words](search.md#grep-for-string-and-exclude-lines-containing-specific-words)
 
 ## [Vim](vim.md)
 
