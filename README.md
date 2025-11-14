@@ -50,23 +50,44 @@ Table of Contents
 
 ## [git](git.md)
 
-- [Add everything except untracked files](git.md#add-everything-except-untracked-files)
 - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
+
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
-- [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
-- [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
+
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
-- [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
-- [Push by specifying key location](git.md#push-by-specifying-key-location)
-- [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
+
 - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
+
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
-- [Squash commits before pushing](git.md#squash-commits-before-pushing)
-- [Squash commits during merge](git.md#squash-commits-during-merge)
-- [Squash commits during rebase](git.md#squash-commits-during-rebase)
-- [Unstage everything after `add`](git.md#unstage-everything-after-add)
+
 - [View file modifications](git.md#view-file-modifications)
+
 - [View ignored files](git.md#view-ignored-files)
+
+- Add
+  
+  - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
+  - [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
+  - [Unstage everything after `add`](git.md#unstage-everything-after-add)
+
+- Fetch
+  
+  - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
+
+- Push
+  
+  - [Push by specifying key location](git.md#push-by-specifying-key-location)
+  - [Squash commits before pushing](git.md#squash-commits-before-pushing)
+
+- Rebase
+  
+  - [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
+  - [Squash commits during rebase](git.md#squash-commits-during-rebase)
+
+- Merge
+  
+  - [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
+  - [Squash commits during merge](git.md#squash-commits-during-merge)
 
 ## [ROS 2](ros2.md)
 
