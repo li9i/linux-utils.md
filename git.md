@@ -125,7 +125,7 @@ git checkout --theirs -- .
 
 > [!CAUTION]
 > During a rebase the meanings of `ours` and `theirs` are reversed compared to a merge:
-> 
+>
 > - `ours` refers to the incoming base (i.e., `master`, the branch you're rebasing onto).
 > - `theirs` refers to the current commit from branch `b` (the one being replayed).
 
@@ -238,6 +238,59 @@ This does not create a merge commit. Instead it stages all the changes from <bra
 
 ```bash
 git commit -m "A single commit message summarizing all changes between <branch> and master"
+```
+
+## Squash commits during rebase
+
+You have multiple commits on one branch that you need to rebase onto `master`, and there are potential conflicts with each commit. You want to avoid resolving multiple conflicts per commit and instead resolve the potential conflicts of one commit (if there are any after squashing them). Let the branch be `my-branch`. If you prefer not to rewrite `my-branch`'s history then
+
+- Create a new branch from `master` and switch to it
+
+```bash
+git checkout master
+git checkout -b my-branch-squashed
+```
+
+Apply the net changes from `my-branch` as one commit:
+
+```bash
+git merge --squash my-branch
+git commit -m "Squashed all changes from bb"
+```
+
+You can now replace `my-branch` with `my-branch-squashed`
+
+```bash
+# On my-branch-squashed still
+git rebase master
+```
+
+---
+
+If you prefer to rewrite history then do an interactive rebase on `my-branch` first:
+
+Checkout `my-branch`
+
+```bash
+git checkout my-branch
+```
+
+Squash all commits in `my-branch` into one (relative to `master`)
+
+```bash
+git rebase -i master
+```
+
+This opens an interactive editor listing all commits in `my-branch` that are not in master. In the editor:
+- Keep the first commit as pick.
+- Change all subsequent commits to squash (or s).
+- Save and close.
+
+Git will then prompt you to edit the commit message for the squashed commit. Finalize it and save. Now `my-branch` has a single commit on top of master. If you want to update master with this change:
+
+```bash
+git checkout master
+git merge --ff-only `my-branch`
 ```
 
 # U

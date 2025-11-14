@@ -63,6 +63,7 @@ Table of Contents
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
 - [Squash commits before pushing](git.md#squash-commits-before-pushing)
 - [Squash commits during merge](git.md#squash-commits-during-merge)
+- [Squash commits during rebase](git.md#squash-commits-during-rebase)
 - [Unstage everything after `add`](git.md#unstage-everything-after-add)
 - [View file modifications](git.md#view-file-modifications)
 - [View ignored files](git.md#view-ignored-files)
