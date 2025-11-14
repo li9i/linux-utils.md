@@ -1,6 +1,7 @@
 [.vimrc](https://github.com/li9i/dotfiles/blob/master/.vimrc)
 
 # E
+
 ## Enable backup, undo, swap
 
 - keep a original state of a file after you open it

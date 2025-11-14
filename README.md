@@ -13,17 +13,20 @@ Table of Contents
 * [git](#git)
 * [ROS 2](#ros-2)
 * [Search](#search)
+* [Vim](#vim)
 * [YouTube](#youtube)
 
-
 ## [APT](apt.md)
+
 - [List installed packages in chronological order](apt.md#list-installed-packages-in-chronological-order-ascending)
 - [Split `apt-get install` to `download` stage and `install` stage](apt.md#split-apt-get-install-to-download-stage-and-install-stage)
 
 ## [Audio](audio.md)
+
 - [Extract audio from video](audio.md#extract-audio-from-video)
 
 ## [Between two computers](between-two-computers.md)
+
 - [Bandwidth Measurement](between-two-computers.md#bandwidth-measurement)
 - [Bridge Networks](between-two-computers.md#bridge-networks)
 - [Discover others in subnet](between-two-computers.md#discover-others-in-subnet)
@@ -32,6 +35,7 @@ Table of Contents
 - [Exchange files (copyparty)](between-two-computers.md#file-exchange-heavyweight)
 
 ## [Docker](docker.md)
+
 - [Cleanup unnecessary space](docker.md#cleanup-unnecessary-space)
 - [Kill running containers](docker.md#kill-running-containers)
 - [Reboot Docker](docker.md#reboot-docker)
@@ -39,11 +43,13 @@ Table of Contents
 - [View occupied space](docker.md#view-occupied-space)
 
 ## [General](general.md)
+
 - [Generate Passwords](general.md#generate-passwords)
 - [Run something once on boot](general.md#run-something-once-on-boot)
 - [Suppress lines of output on command line](general.md#suppress-lines-of-output-on-command-line)
 
 ## [git](git.md)
+
 - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
 - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
@@ -62,6 +68,7 @@ Table of Contents
 - [View ignored files](git.md#view-ignored-files)
 
 ## [ROS 2](ros2.md)
+
 - [Echo specific field of message](ros2.md#echo-field-of-message)
 - [Migrate signing key](ros2.md@migrate.signing-key)
 - [Publish static transform on the fly](ros2.md#publish-static-transform-on-the-fly)
@@ -69,6 +76,7 @@ Table of Contents
 - [Throttle ros2 topic echo frequency](ros2.md#throttle-ros2-topic-echo-frequency)
 
 ## [Search](search.md)
+
 - [grep for string in subset of all files](search.md#grep-for-string-in-semi-known-filenames)
 - [grep for string and get unique matching words](search.md#grep-for-string-and-get-unique-matching-words)
 - [grep for string and show preceding/succeeding lines](search.md#grep-for-string-and-show-k-preceding-n-succeeding-lines)
@@ -76,8 +84,10 @@ Table of Contents
 - [grep for string and exclude lines containing specific words](search.md#grep-for-string-and-exclude-lines-containing-specific-words)
 
 ## [Vim](vim.md)
+
 - [Enable backup, undo, swap](vim.md#vim-enable-backup-undo-swap)
 
 ## [YouTube](youtube.md)
+
 - [Download video](youtube.md#download-video)
 - [Download video but extract only audio](youtube.md#download-video-but-extract-only-audio)
