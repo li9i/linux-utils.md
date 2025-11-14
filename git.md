@@ -125,7 +125,7 @@ git checkout --theirs -- .
 
 > [!CAUTION]
 > During a rebase the meanings of `ours` and `theirs` are reversed compared to a merge:
->
+> 
 > - `ours` refers to the incoming base (i.e., `master`, the branch you're rebasing onto).
 > - `theirs` refers to the current commit from branch `b` (the one being replayed).
 
@@ -234,7 +234,7 @@ git checkout master
 git merge --squash <branch>
 ```
 
-This does not create a merge commit. Instead it stages all the changes from <branch> into the index. Commit the squashed changes with
+This does not create a merge commit. Instead it stages all the changes from `<branch>` into the index. Commit the squashed changes with
 
 ```bash
 git commit -m "A single commit message summarizing all changes between <branch> and master"
@@ -282,6 +282,7 @@ git rebase -i master
 ```
 
 This opens an interactive editor listing all commits in `my-branch` that are not in master. In the editor:
+
 - Keep the first commit as pick.
 - Change all subsequent commits to squash (or s).
 - Save and close.
