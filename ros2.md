@@ -1,3 +1,74 @@
+# C
+
+## Colcon ([source](https://gist.github.com/chapulina/7400a708df655cbfba218e169fcad97f#file-colcon_cheatsheet-md))
+
+Only one package:
+
+```bash
+--packages-select <package>
+```
+
+Packages with regex:
+
+```bash
+--packages-select-regex <regex>
+```
+
+Verbose, print to console:
+
+```bash
+--event-handlers console_direct+
+```
+
+Run specific tests:
+
+```bash
+--ctest-args -R <part of test name>
+```
+
+Disable tests compilation:
+
+```bash
+--cmake-args -DBUILD_TESTING=false
+```
+
+Combine multiple CMake args:
+
+```bash
+--cmake-args ' -DBUILD_TESTING=false' ' -DENABLE_PROFILER=1'
+```
+
+Repeat test:
+
+```bash
+--retest-until-fail 10
+```
+
+Uninstall:
+
+```bash
+colcon build --packages-select <package> --cmake-target uninstall
+```
+
+Number of cores:
+
+```bash
+MAKEFLAGS="-j4" colcon build
+```
+
+Specific target, like `codecheck`:
+
+```bash
+--cmake-target codecheck
+```
+
+List all available targets for a project:
+
+```bash
+cd build/project_name
+make help
+```
+
 # E
 
 ## Echo field of message
