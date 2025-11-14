@@ -125,7 +125,7 @@ git checkout --theirs -- .
 
 > [!CAUTION]
 > During a rebase the meanings of `ours` and `theirs` are reversed compared to a merge:
-> 
+>
 > - `ours` refers to the incoming base (i.e., `master`, the branch you're rebasing onto).
 > - `theirs` refers to the current commit from branch `b` (the one being replayed).
 
@@ -255,7 +255,7 @@ Apply the net changes from `my-branch` as one commit:
 
 ```bash
 git merge --squash my-branch
-git commit -m "Squashed all changes from bb"
+git commit -m "Squashed all changes from my-branch"
 ```
 
 You can now replace `my-branch` with `my-branch-squashed`
