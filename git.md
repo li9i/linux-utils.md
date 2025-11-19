@@ -53,6 +53,14 @@ git cherry-pick abc123
 GIT_SSH_COMMAND='ssh -i /path/to/private_key' git fetch origin
 ```
 
+## Find files changed between commits, conditionally
+
+Say you want to get all yaml files which changed between two commits
+
+```bash
+git diff --name-only <commit-sha-1> <commit-sha-2> -- '**/*.yaml'
+```
+
 ## Forgot to add file(s) to latest commit and realised before pushing?
 
 Don't worry. You can add the file(s) to the latest commit with

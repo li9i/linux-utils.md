@@ -61,6 +61,8 @@ Table of Contents
   - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
   - [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
   - [Unstage everything after `add`](git.md#unstage-everything-after-add)
+- `diff`
+  - [Find files changed between commits, conditionally](git.md#find-files-changed-between-commits-conditionally)
 - `fetch`
   - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
 - `push`
