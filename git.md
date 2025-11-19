@@ -125,6 +125,30 @@ GIT_SSH_COMMAND='ssh -i /path/to/private_key' git push origin main
 
 ## Rebase and automatically accept changes from branch
 
+### TL;DR
+
+#### variant A
+
+You are on branch `master` and you want to rebase `origin/master` on top of it. You can keep the version of `origin/master` instead of `master` with
+
+```bash
+# On branch master
+# git rebase origin/master
+git checkout --ours -- .
+```
+
+#### variant B
+
+You are on branch `branch` and you want to rebase your work on `master`. You can keep the version of `branch` instead of `master` with
+
+```bash
+# On branch branch
+# git rebase master
+git checkout --theirs -- .
+```
+
+### Long story
+
 It is possible to resolve `rebase` conflicts automatically by favouring the changes from branch `b` (the branch being rebased) over those from `master` (the base branch, the branch onto which `b` is rebased). However, Git doesn’t do this by default; you need to explicitly instruct it. During a `rebase` with conflicts, Git pauses and asks you to resolve them. If you want to automatically accept all changes from branch `b` (i.e., `ours` in the context of a `rebase`) you can use:
 
 ```bash
