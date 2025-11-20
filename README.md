@@ -57,12 +57,12 @@ Table of Contents
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
 - [View file modifications](git.md#view-file-modifications)
 - [View ignored files](git.md#view-ignored-files)
+- `diff`
+  - [Find files changed between commits filtered by regex](git.md#find-files-changed-between-commits-filtered-by-regex)
 - `add`
   - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
   - [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
   - [Unstage everything after `add`](git.md#unstage-everything-after-add)
-- `diff`
-  - [Find files changed between commits, conditionally](git.md#find-files-changed-between-commits-conditionally)
 - `fetch`
   - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
 - `push`

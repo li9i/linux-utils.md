@@ -53,12 +53,21 @@ git cherry-pick abc123
 GIT_SSH_COMMAND='ssh -i /path/to/private_key' git fetch origin
 ```
 
-## Find files changed between commits, conditionally
+## Find files changed between commits filtered by regex
 
 Say you want to get all yaml files which changed between two commits
 
 ```bash
 git diff --name-only <commit-sha-1> <commit-sha-2> -- '**/*.yaml'
+```
+
+If you want to diff them
+
+```bash
+commit_sha1=<commit-sha-1>
+commit_sha2=<commit-sha-2>
+files=$(git diff --name-only $commit_sha1 $commit_sha2 -- '**/*.yaml')
+for file in $files; do git difftool $commit_sha1 $commit_sha2 -- "$file"; done
 ```
 
 ## Forgot to add file(s) to latest commit and realised before pushing?
