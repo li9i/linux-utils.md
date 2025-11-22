@@ -81,6 +81,7 @@ Table of Contents
 - [`ros2 topic echo` specific field of message](ros2.md#echo-field-of-message)
 - [Migrate signing key](ros2.md@migrate.signing-key)
 - [Publish static transform on the fly](ros2.md#publish-static-transform-on-the-fly)
+- [Release Package via Apt](ros2.md#release-package-via-apt)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
 - [Throttle `ros2 topic echo` frequency](ros2.md#throttle-ros2-topic-echo-frequency)
 
