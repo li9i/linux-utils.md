@@ -110,7 +110,7 @@ sudo apt-get install ros-humble-apriltag-hitch-estimation
 
 ### Step 1
 
-Place the package in a github repository. In this case https://github.com/li9i/apriltag-hitch-estimation. Then create an empty repository called with the same name but append to it the string `-release`, e.g. https://github.com/li9i/apriltag-hitch-estimation-release.
+Place the package in a github repository under a branch called `$ROS_DISTRO-devel`. In this case `https://github.com/li9i/apriltag-hitch-estimation` under branch `humble-devel`. Then create an empty repository called with the same name but append to it the string `-release`, e.g. https://github.com/li9i/apriltag-hitch-estimation-release.
 
 ### Step 2
 
