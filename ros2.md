@@ -136,7 +136,7 @@ Then follow Guide A.
 
 - [Releasing a Package / Index Your Packages](https://docs.ros.org/en/humble/How-To-Guides/Releasing/Index-Your-Packages.html)
 
-Follow the guide. At some point you come across [Open a pull request to ros/rosdistro](https://docs.ros.org/en/humble/How-To-Guides/Releasing/Index-Your-Packages.html#open-a-pull-request-to-ros-rosdistro). Before requesting a pull visit the [REVIEW_GUIDELINES](https://github.com/ros/rosdistro/blob/master/REVIEW_GUIDELINES.md) and make sure to adhere to them. Then follow [qwen's advice](https://chat.qwen.ai/s/dfa33c4a-8b08-4ecb-8fa3-a63ce24703a8?fev=0.0.248). Before doing that though followed `1` and `2` from [Manually Authorizing Bloom to Generate Github Pull Requests](https://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization).
+Follow the guide. At some point you come across [Open a pull request to ros/rosdistro](https://docs.ros.org/en/humble/How-To-Guides/Releasing/Index-Your-Packages.html#open-a-pull-request-to-ros-rosdistro). Before requesting a pull visit the [REVIEW_GUIDELINES](https://github.com/ros/rosdistro/blob/master/REVIEW_GUIDELINES.md) and make sure to adhere to them. Then follow `1` and `2` from [Manually Authorizing Bloom to Generate Github Pull Requests](https://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization). Then [qwen's advice](https://chat.qwen.ai/s/dfa33c4a-8b08-4ecb-8fa3-a63ce24703a8?fev=0.0.248). 
 
 Then run
 
