@@ -69,14 +69,6 @@ cd build/project_name
 make help
 ```
 
-# E
-
-## Echo field of message
-
-```bash
-ros2 topic echo --once /stereo/right/image_rect --field header.stamp
-```
-
 # M
 
 ## Migrate signing key
@@ -110,13 +102,16 @@ sudo apt-get install ros-humble-apriltag-hitch-estimation
 
 ### Step 1
 
-Place the package in a github repository under a branch called `$ROS_DISTRO-devel`. In this case 
+Place the package in a github repository under a branch called `$ROS_DISTRO-devel`. In this case
+
 ```
 https://github.com/li9i/apriltag-hitch-estimation
 ```
-under branch `humble-devel`. 
 
-Then create an empty repository titled with the same name but append to it the string `-release`, e.g. 
+under branch `humble-devel`.
+
+Then create an empty repository titled with the same name but append to it the string `-release`, e.g.
+
 ```
 https://github.com/li9i/apriltag-hitch-estimation-release
 ```
@@ -145,7 +140,7 @@ Then follow Guide A.
 
 - [Releasing a Package / Index Your Packages](https://docs.ros.org/en/humble/How-To-Guides/Releasing/Index-Your-Packages.html)
 
-Follow the guide. At some point you come across [Open a pull request to ros/rosdistro](https://docs.ros.org/en/humble/How-To-Guides/Releasing/Index-Your-Packages.html#open-a-pull-request-to-ros-rosdistro). Before requesting a pull visit the [REVIEW_GUIDELINES](https://github.com/ros/rosdistro/blob/master/REVIEW_GUIDELINES.md) and make sure to adhere to them. Then follow `1` and `2` from [Manually Authorizing Bloom to Generate Github Pull Requests](https://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization). Then [qwen's advice](https://chat.qwen.ai/s/dfa33c4a-8b08-4ecb-8fa3-a63ce24703a8?fev=0.0.248). 
+Follow the guide. At some point you come across [Open a pull request to ros/rosdistro](https://docs.ros.org/en/humble/How-To-Guides/Releasing/Index-Your-Packages.html#open-a-pull-request-to-ros-rosdistro). Before requesting a pull visit the [REVIEW_GUIDELINES](https://github.com/ros/rosdistro/blob/master/REVIEW_GUIDELINES.md) and make sure to adhere to them. Then follow `1` and `2` from [Manually Authorizing Bloom to Generate Github Pull Requests](https://wiki.ros.org/bloom/Tutorials/GithubManualAuthorization). Then [qwen's advice](https://chat.qwen.ai/s/dfa33c4a-8b08-4ecb-8fa3-a63ce24703a8?fev=0.0.248).
 
 Then run
 
@@ -669,7 +664,15 @@ ros2 run nav2_map_server map_saver_cli -f $MAP_SAVE_FILEPATH -t MAP_TOPIC_TO_SAV
 
 # T
 
-## Throttle ros2 topic echo frequency
+## `topic echo`
+
+### Echo field of message
+
+```bash
+ros2 topic echo --once /stereo/right/image_rect --field header.stamp
+```
+
+### Throttle frequency
 
 Echo every `10`th message in topic `/topic_name`
 
