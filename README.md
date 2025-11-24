@@ -83,8 +83,8 @@ Table of Contents
 - [Release Package via Apt](ros2.md#release-package-via-apt)
 - [Save map published at custom topic](ros2.md#save-map-published-at-custom-topic)
 - `topic echo`
-- [Echo specific field of message](ros2.md#echo-field-of-message)
-- [Throttle frequency](ros2.md#throttle-frequency)
+  - [Echo specific field of message](ros2.md#echo-field-of-message)
+  - [Throttle frequency](ros2.md#throttle-frequency)
 
 ## [Search](search.md)
 
