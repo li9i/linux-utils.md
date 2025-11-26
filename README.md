@@ -1,7 +1,3 @@
-# linux-utils.md
-
-Notes on sweet commands/utilities in linux
-
 Table of Contents
 =================
 
