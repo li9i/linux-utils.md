@@ -81,6 +81,34 @@ git commit --amend
 
 # L
 
+## LFS
+
+### Installation
+
+```bash
+git lfs install
+```
+
+### Add stuff to
+
+```bash
+git lfs track "file-larger-than-100MB.psd"
+```
+
+or place files names and regexes in `$REPOSITORY_PATH/.gitattributes`
+
+### Migrate existing files to LFS (e.g. large files already committed)
+
+```bash
+git lfs migrate import --include="*.bin,*.zip" --everything
+```
+
+### Remove commit-unreferenced stuff from
+
+1. Delete files
+2. Commit
+3. `bash git lfs prune`
+
 ## List files modified or yet untracked
 
 ```bash
