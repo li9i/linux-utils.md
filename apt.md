@@ -6,6 +6,12 @@
 zcat -f /var/log/dpkg.log* 2>/dev/null | grep " install " | awk '{print $1, $2, $4}' | sort
 ```
 
+## List manually installed packages
+
+```bash
+apt-mark showmanual
+```
+
 # S
 
 ## Split `apt-get install` to `download` stage and `install` stage
