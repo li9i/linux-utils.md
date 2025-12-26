@@ -15,6 +15,7 @@ Table of Contents
 ## [`apt`](apt.md)
 
 - [List installed packages in chronological order](apt.md#list-installed-packages-in-chronological-order-ascending)
+- [List manually installed packages](apt.md#list-manually-installed-packages)
 - [Split `apt-get install` to `download` stage and `install` stage](apt.md#split-apt-get-install-to-download-stage-and-install-stage)
 
 ## [Audio](audio.md)
