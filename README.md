@@ -96,6 +96,10 @@ Table of Contents
 - [`grep` for string in files and open each one in separate window](search.md#grep-for-string-in-files-and-open-each-one-in-separate-window)
 - [`grep` for string and exclude lines containing specific words](search.md#grep-for-string-and-exclude-lines-containing-specific-words)
 
+## [Shell](shell.md)
+
+- [Pure `bash` bible](shell.md#pure-bash-bible)
+
 ## [Vim](vim.md)
 
 - [Enable backup, undo, swap](vim.md#vim-enable-backup-undo-swap)
