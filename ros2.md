@@ -647,6 +647,34 @@ If the pull request is merged then the package will appear at https://index.ros.
 
 [source](https://docs.ros.org/en/humble/How-To-Guides/Releasing/First-Time-Release.html#next-steps)
 
+#### Updating to new version
+
+```bash
+bloom-release --rosdistro humble --track humble hitch_estimation_apriltag_array --edit
+```
+
+And when you hit
+
+```bash
+Version:
+  :{auto}
+    This means the version will be guessed from the devel branch.
+    This means that the devel branch must be set, the devel branch must exist,
+    and there must be a valid package.xml in the upstream devel branch.
+  :{ask}
+    This means that the user will be prompted for the version each release.
+    This also means that the upstream devel will be ignored.
+  <version>
+    This will be the version used.
+    It must be updated for each new upstream version.
+```
+
+type the new version number, e.g.
+
+```bash
+  [':{auto}']: 0.0.2
+```
+
 # S
 
 ## Save map published at custom topic
