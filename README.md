@@ -51,6 +51,7 @@ Table of Contents
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
 - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
+- [Restore file to past state using commit hash](git.md#restore-file-to-past-state-using-commit-hash)
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
 - [View file modifications](git.md#view-file-modifications)
 - [View ignored files](git.md#view-ignored-files)

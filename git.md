@@ -243,6 +243,12 @@ Locate the commit you want to remove in the editor. Then change the word `pick` 
 git rebase --continue
 ```
 
+## Restore file to past state using commit hash
+
+```bash
+git checkout <commit-hash> -- <filename>
+```
+
 ## Revert multiple commits in one commit
 
 ### Commits are sequential
