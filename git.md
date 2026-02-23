@@ -45,6 +45,14 @@ git checkout <branch-a>
 git cherry-pick abc123
 ```
 
+# D
+
+## `diff` different files across different branches
+
+```bash
+git diff main:src/file_a.txt feature:src/folder/file_b.txt
+```
+
 # F
 
 ## Fetch by specifying key location

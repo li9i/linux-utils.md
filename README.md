@@ -56,6 +56,7 @@ Table of Contents
 - [View file modifications](git.md#view-file-modifications)
 - [View ignored files](git.md#view-ignored-files)
 - `diff`
+  - [different files across different branches](git.md#diff-different-files-across-different-branches)
   - [Find files changed between commits filtered by regex](git.md#find-files-changed-between-commits-filtered-by-regex)
 - `add`
   - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
