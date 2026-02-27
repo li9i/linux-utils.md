@@ -49,6 +49,7 @@ Table of Contents
 
 - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
 - [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
+- [Install or run pre-commit hooks](git.md#pre-commit)
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
 - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
 - [Restore file to past state using commit hash](git.md#restore-file-to-past-state-using-commit-hash)

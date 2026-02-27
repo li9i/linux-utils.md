@@ -87,6 +87,24 @@ git add <forgotten-files>
 git commit --amend
 ```
 
+# H
+
+## Hooks
+
+### Pre-commit
+
+#### Install
+
+```bash
+pre-commit install
+```
+
+#### Run without committing
+
+```bash
+pre-commit run -a
+```
+
 # L
 
 ## LFS
