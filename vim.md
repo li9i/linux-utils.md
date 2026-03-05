@@ -28,3 +28,27 @@ set directory=~/.vim/swap//
 set undofile
 set undodir=~/.vim/undo//
 ```
+
+# R
+
+## Replace text and preserve case
+
+Say you want to replace all occurrences of the word `abc` with `xyz` but `abc` also appears as `ABC` or `Abc` and you want to preserve the current case (e.g. turn `ABC` to `XYZ` and `Abc` to `Xyz`). All you need is the [vim-abolish plugin](https://github.com/tpope/vim-abolish).
+
+### Usage
+
+```vim
+:%S/abc/xyz/g
+```
+
+>[!CAUTION]
+Note the capital S
+
+### Installation
+
+```bash
+mkdir -p ~/.vim/pack/tpope/start
+cd ~/.vim/pack/tpope/start
+git clone https://tpope.io/vim/abolish.git
+vim -u NONE -c "helptags abolish/doc" -c q
+```

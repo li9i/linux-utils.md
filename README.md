@@ -107,6 +107,7 @@ Table of Contents
 ## [Vim](vim.md)
 
 - [Enable backup, undo, swap](vim.md#vim-enable-backup-undo-swap)
+- [Replace text and preserve case](vim.md#replace-text-and-preserve-case)
 
 ## [YouTube](youtube.md)
 
