@@ -184,6 +184,10 @@ Then you may keep the files that you need and discard the rest.
 GIT_SSH_COMMAND='ssh -i /path/to/private_key' git push origin main
 ```
 
+## Force-push but prevent accidental overwrite
+
+> `--force-with-lease` is safer than `--force` as it will refuse to push if someone else has pushed to the branch in the meantime, thus preventing you from accidentally overwriting their work
+
 # R
 
 ## Rebase and automatically accept changes from branch
@@ -220,7 +224,7 @@ git checkout --theirs -- .
 
 > [!CAUTION]
 > During a rebase the meanings of `ours` and `theirs` are reversed compared to a merge:
->
+> 
 > - `ours` refers to the incoming base (i.e., `master`, the branch you're rebasing onto).
 > - `theirs` refers to the current commit from branch `b` (the one being replayed).
 

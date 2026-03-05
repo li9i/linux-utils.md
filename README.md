@@ -67,6 +67,7 @@ Table of Contents
   - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
 - `push`
   - [Push by specifying key location](git.md#push-by-specifying-key-location)
+  - [Force-push but prevent accidental overwrite](git.md#force-push-but-prevent-accidental-overwrite)
   - [Squash commits before pushing](git.md#squash-commits-before-pushing)
 - `rebase`
   - [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
