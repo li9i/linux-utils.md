@@ -78,6 +78,20 @@ files=$(git diff --name-only $commit_sha1 $commit_sha2 -- '**/*.yaml')
 for file in $files; do git difftool $commit_sha1 $commit_sha2 -- "$file"; done
 ```
 
+## Find unstaged files in which a particular string was modified
+
+Say string `KeyError` was modified in a bunch of files that you haven't yet committed. Find these files with
+
+```bash
+git diff HEAD -S KeyError --name-only
+```
+
+Search for a regex with `-G` instead
+
+```bash
+git diff HEAD -G KeyError* --name-only
+```
+
 ## Forgot to add file(s) to latest commit and realised before pushing?
 
 Don't worry. You can add the file(s) to the latest commit with
@@ -224,7 +238,7 @@ git checkout --theirs -- .
 
 > [!CAUTION]
 > During a rebase the meanings of `ours` and `theirs` are reversed compared to a merge:
-> 
+>
 > - `ours` refers to the incoming base (i.e., `master`, the branch you're rebasing onto).
 > - `theirs` refers to the current commit from branch `b` (the one being replayed).
 

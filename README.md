@@ -59,6 +59,7 @@ Table of Contents
 - `diff`
   - [different files across different branches](git.md#diff-different-files-across-different-branches)
   - [Find files changed between commits filtered by regex](git.md#find-files-changed-between-commits-filtered-by-regex)
+  - [Find unstaged files in which a particular string was modified](git.md#find-unstaged-files-in-which-a-particular-string-was-modified)
 - `add`
   - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
   - [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
