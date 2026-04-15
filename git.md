@@ -314,7 +314,48 @@ git commit -m "Revert specific commits"
 
 # S
 
-## Squash commits before pushing
+## Squash one branch to a single commit; then place it in a branch
+
+Suppose that in a github repository there are two branches, branch B and branch C. Branch B has a bunch of commits that should be squashed into one commit, and then placed in branch C.
+
+```bash
+git checkout C
+
+# This "teleports" the files from branch B into the current working directory and automatically stages them, but it does not bring over the commit history.
+git checkout B
+```
+
+If not all files from branch B should be copied but only those under a specific directory, then you may achieve it like so:
+
+```bash
+git checkout C
+git checkout B -- path/to/directory
+```
+
+## Squash a sequence of commits to a single commit; then place it in a branch
+
+Suppose that in a github repository there are two branches, branch B and branch C. Branch B has a bunch of commits, a finite sequence of which should be squashed into one commit, and then placed in branch C.
+
+Start by creating a temporary branch that points to the last commit in the sequence you want from branch B.
+
+```bash
+git checkout -b temp-slice <last-commit-hash>
+```
+
+Perform a "soft reset" back to the commit immediately before the start of the desired sequence. This collapses all changes in the sequence into the staging area.
+
+```bash
+# <start-commit-hash-1> is the hash of the commit **just before** the sequence starts
+git reset --soft <start-commit-hash-1>
+```
+
+```bash
+git commit -m "Squashed sequence from branch B"
+```
+
+Now follow [Squash a sequence of commits to a single commit; then place it in a branch](#squash-one-branch-to-a-single-commit-then-place-it-in-a-branch), where the new branch B is `temp-slice`
+
+## Squash local commits before pushing
 
 You've made N incremental local commits but you want to squash them into one commit before pushing it.
 

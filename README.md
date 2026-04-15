@@ -56,6 +56,9 @@ Table of Contents
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
 - [View file modifications](git.md#view-file-modifications)
 - [View ignored files](git.md#view-ignored-files)
+- `checkout`
+  - [Squash one branch to a single commit---then place it in a branch](git.md#squash-one-branch-to-a-single-commit-then-place-it-in-a-branch)
+  - [Squash a sequence of commits to a single commit---then place it in a branch](git.md#squash-a-sequence-of-commits-to-a-single-commit-then-place-it-in-a-branch)
 - `diff`
   - [different files across different branches](git.md#diff-different-files-across-different-branches)
   - [Find files changed between commits filtered by regex](git.md#find-files-changed-between-commits-filtered-by-regex)
@@ -69,7 +72,7 @@ Table of Contents
 - `push`
   - [Push by specifying key location](git.md#push-by-specifying-key-location)
   - [Force-push but prevent accidental overwrite](git.md#force-push-but-prevent-accidental-overwrite)
-  - [Squash commits before pushing](git.md#squash-commits-before-pushing)
+  - [Squash local commits before pushing](git.md#squash-local-commits-before-pushing)
 - `rebase`
   - [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
   - [Squash commits during rebase](git.md#squash-commits-during-rebase)
