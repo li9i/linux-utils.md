@@ -342,7 +342,8 @@ Start by creating a temporary branch that points to the last commit in the seque
 git checkout -b temp-slice <last-commit-hash>
 ```
 
-Perform a "soft reset" back to the commit immediately before the start of the desired sequence. This collapses all changes in the sequence into the staging area.
+Perform a "soft reset" back to the commit **immediately before the start of the desired sequence**. This collapses all changes in the sequence into the staging area.
+
 
 ```bash
 # <start-commit-hash-1> is the hash of the commit **just before** the sequence starts
