@@ -48,9 +48,6 @@ Table of Contents
 ## [`git`](git.md)
 
 - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
-- [Copy commit from `<branch-b>` to `<branch-a>`](git.md#copy-commit-from-branch-b-to-branch-a)
-  - [The two branches are in the same repository](git.md#the-two-branches-are-in-the-same-repository)
-  - [The two branches are NOT in the same repository](git.md#the-two-branches-are-NOT-in-the-same-repository)
 - [Install or run pre-commit hooks](git.md#pre-commit)
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
 - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
@@ -61,6 +58,9 @@ Table of Contents
 - `checkout`
   - [Squash one branch to a single commit---then place it in a branch](git.md#squash-one-branch-to-a-single-commit-then-place-it-in-a-branch)
   - [Squash a sequence of commits to a single commit---then place it in a branch](git.md#squash-a-sequence-of-commits-to-a-single-commit-then-place-it-in-a-branch)
+- `cherry-pick`
+  - [The two branches are in the same repository](git.md#the-two-branches-are-in-the-same-repository)
+  - [The two branches are NOT in the same repository](git.md#the-two-branches-are-NOT-in-the-same-repository)
 - `diff`
   - [different files across different branches](git.md#diff-different-files-across-different-branches)
   - [Find files changed between commits filtered by regex](git.md#find-files-changed-between-commits-filtered-by-regex)

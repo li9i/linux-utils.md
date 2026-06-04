@@ -36,7 +36,7 @@ Host github.com
   IdentitiesOnly yes
 ```
 
-## Copy commit from `<branch-b>` to `<branch-a>`
+## `cherry-pick` a commit
 
 ### The two branches are in the same repository
 
