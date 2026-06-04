@@ -38,12 +38,40 @@ Host github.com
 
 ## Copy commit from `<branch-b>` to `<branch-a>`
 
+### The two branches are in the same repository
+
 Let the commit in question have hash `abc123`. Then
 
 ```bash
 git checkout <branch-a>
 git cherry-pick abc123
 ```
+
+### The two branches are NOT in the same repository
+
+Two ways to do this.
+
+#### Option 1: Add the source repo as a remote
+
+```bash
+cd /path/to/target-repo
+git remote add other /path/to/source-repo
+git fetch other
+git cherry-pick <commit-hash>
+git remote remove other   # optional cleanup
+```
+
+#### Option 2: Export a patch and apply it
+
+```bash
+# In the source repo
+git format-patch -1 <commit-hash>   # creates 0001-xxx.patch
+
+# In the target repo
+git am /path/to/0001-xxx.patch
+```
+
+If the patch doesn't apply cleanly, you can try `git am -3` (three-way merge) or fall back to `git apply --reject` and fix things manually.
 
 # D
 
