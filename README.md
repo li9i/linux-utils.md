@@ -55,6 +55,10 @@ Table of Contents
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
 - [View file modifications](git.md#view-file-modifications)
 - [View ignored files](git.md#view-ignored-files)
+- `add`
+  - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
+  - [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
+  - [Unstage everything after `add`](git.md#unstage-everything-after-add)
 - `checkout`
   - [Squash one branch to a single commit---then place it in a branch](git.md#squash-one-branch-to-a-single-commit-then-place-it-in-a-branch)
   - [Squash a sequence of commits to a single commit---then place it in a branch](git.md#squash-a-sequence-of-commits-to-a-single-commit-then-place-it-in-a-branch)
@@ -65,10 +69,6 @@ Table of Contents
   - [different files across different branches](git.md#diff-different-files-across-different-branches)
   - [Find files changed between commits filtered by regex](git.md#find-files-changed-between-commits-filtered-by-regex)
   - [Find unstaged files in which a particular string was modified](git.md#find-unstaged-files-in-which-a-particular-string-was-modified)
-- `add`
-  - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
-  - [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
-  - [Unstage everything after `add`](git.md#unstage-everything-after-add)
 - `fetch`
   - [Fetch by specifying key location](git.md#fetch-by-specifying-key-location)
 - `push`
@@ -78,14 +78,16 @@ Table of Contents
 - `rebase`
   - [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
   - [Squash commits during rebase](git.md#squash-commits-during-rebase)
-- `merge`
-  - [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
-  - [Squash commits during merge](git.md#squash-commits-during-merge)
 - `lfs`
   - [Installation](git.md#installation)
   - [Add stuff to](git.md#add-stuff-to)
   - [Migrate existing files to LFS (e.g. large files already committed)](git.md#migrate-existing-files-to-LFS-eg-large-files-already-committed)
   - [Remove commit-unreferenced stuff from](git.md#remove-commit-unreferenced-stuff-from)
+- `merge`
+  - [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
+  - [Squash commits during merge](git.md#squash-commits-during-merge)
+- `worktree`
+  - [What's a typical workflow?](git.md#worktrees)
 
 ## [ROS 2](ros2.md)
 

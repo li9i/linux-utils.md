@@ -527,3 +527,20 @@ git diff --word-diff
 ```bash
 git ls-files --others --ignored --exclude-standard
 ```
+
+# W
+
+## Worktrees
+
+You are in the middle of working and your boss comes in and demands that you fix something immediately. You might typically use `git stash` to store your changes away temporarily, however, you don’t want to risk disturbing any of it. Instead, you create a temporary linked worktree to make the emergency fix, remove it when done, and then resume your work.
+
+```
+$ git worktree add -b emergency-fix ../temp master
+$ pushd ../temp
+# ... hack hack hack ...
+$ git commit -a -m 'emergency fix'
+$ popd
+$ git worktree remove ../temp
+```
+
+> source: https://git-scm.com/docs/git-worktree#_examples
