@@ -79,7 +79,7 @@ Table of Contents
 - `rebase`
   - [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
   - [Squash commits during rebase](git.md#squash-commits-during-rebase)
--  `reset`
+- `reset`
   - [Take back last commit but keep changes unstaged for further processing](git.md#take-back-last-commit-but-keep-changes-unstaged-for-further-processing)
 - `lfs`
   - [Installation](git.md#installation)
