@@ -51,6 +51,7 @@ Table of Contents
 - [Install or run pre-commit hooks](git.md#pre-commit)
 - [List files modified or yet untracked](git.md#list-files-modified-or-yet-untracked)
 - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
+- [Resolve conflicts after merge](git.md#resolve-conflicts-after-merge)
 - [Restore file to past state using commit hash](git.md#restore-file-to-past-state-using-commit-hash)
 - [Revert multiple commits in one new commit](git.md#revert-multiple-commits-in-one-commit)
 - [View file modifications](git.md#view-file-modifications)
@@ -78,6 +79,8 @@ Table of Contents
 - `rebase`
   - [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
   - [Squash commits during rebase](git.md#squash-commits-during-rebase)
+-  `reset`
+  - [Take back last commit but keep changes unstaged for further processing](git.md#take-back-last-commit-but-keep-changes-unstaged-for-further-processing)
 - `lfs`
   - [Installation](git.md#installation)
   - [Add stuff to](git.md#add-stuff-to)

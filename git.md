@@ -315,6 +315,24 @@ Locate the commit you want to remove in the editor. Then change the word `pick` 
 git rebase --continue
 ```
 
+## Resolve conflicts after merge
+
+>[!NOTE]
+> You might want to have meld configured as your `difftool` as well as your `mergetool`
+> ```
+> git config --global merge.tool meld
+> ```
+
+```bash
+git mergetool <conflicted-file>
+```
+Meld will open with three panes: your branch's version on the left, the other branch's version on the right, and the merge result in the middle. Edit the middle pane, save, and close meld. Git will then mark the file as resolved and ask whether to keep the backup .orig file. After that, finish the merge with:
+
+```bash
+git add <conflicted-file>   # usually automatic after mergetool, but check git status
+git commit
+```
+
 ## Restore file to past state using commit hash
 
 ```bash
@@ -482,6 +500,20 @@ Git will then prompt you to edit the commit message for the squashed commit. Fin
 git checkout master
 git merge --ff-only `my-branch`
 ```
+
+# T
+
+## Take back last commit but keep changes unstaged for further processing
+
+> (commits) `A` <-- `B`. How to go back to A but keep B's changes as unstaged?
+
+Surprisingly simple:
+
+```bash
+git reset HEAD~1
+```
+
+Use `--force-with-lease` if B was pushed.
 
 # U
 
