@@ -60,9 +60,6 @@ Table of Contents
   - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
   - [Forgot to add file(s) to latest commit and realised before pushing?](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
   - [Unstage everything after `add`](git.md#unstage-everything-after-add)
-- `checkout`
-  - [Squash one branch to a single commit---then place it in a branch](git.md#squash-one-branch-to-a-single-commit-then-place-it-in-a-branch)
-  - [Squash a sequence of commits to a single commit---then place it in a branch](git.md#squash-a-sequence-of-commits-to-a-single-commit-then-place-it-in-a-branch)
 - `cherry-pick`
   - [The two branches are in the same repository](git.md#the-two-branches-are-in-the-same-repository)
   - [The two branches are NOT in the same repository](git.md#the-two-branches-are-NOT-in-the-same-repository)
@@ -75,10 +72,8 @@ Table of Contents
 - `push`
   - [Push by specifying key location](git.md#push-by-specifying-key-location)
   - [Force-push but prevent accidental overwrite](git.md#force-push-but-prevent-accidental-overwrite)
-  - [Squash local commits before pushing](git.md#squash-local-commits-before-pushing)
 - `rebase`
   - [Rebase and automatically accept changes from branch](git.md#rebase-and-automatically-accept-changes-from-branch)
-  - [Squash commits during rebase](git.md#squash-commits-during-rebase)
 - `reset`
   - [Take back last commit but keep changes unstaged for further processing](git.md#take-back-last-commit-but-keep-changes-unstaged-for-further-processing)
 - `lfs`
@@ -88,7 +83,12 @@ Table of Contents
   - [Remove commit-unreferenced stuff from](git.md#remove-commit-unreferenced-stuff-from)
 - `merge`
   - [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
+- squash
+  - [Squash a sequence of commits to a single commit---then place it in a branch](git.md#squash-a-sequence-of-commits-to-a-single-commit-then-place-it-in-a-branch)
   - [Squash commits during merge](git.md#squash-commits-during-merge)
+  - [Squash commits during rebase](git.md#squash-commits-during-rebase)
+  - [Squash local commits before pushing](git.md#squash-local-commits-before-pushing)
+  - [Squash one branch to a single commit---then place it in a branch](git.md#squash-one-branch-to-a-single-commit-then-place-it-in-a-branch)
 - `worktree`
   - [What's a typical workflow?](git.md#worktrees)
 
