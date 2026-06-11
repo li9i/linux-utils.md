@@ -1,5 +1,13 @@
 # C
 
+## Cancel action goal from CLI
+
+Action `load_operation` may be canceled by
+
+```bash
+ros2 service call /load_operation/_action/cancel_goal action_msgs/srv/CancelGoal "{}"
+```
+
 ## Colcon ([source](https://gist.github.com/chapulina/7400a708df655cbfba218e169fcad97f#file-colcon_cheatsheet-md))
 
 Only one package:

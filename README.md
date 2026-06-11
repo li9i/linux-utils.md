@@ -94,6 +94,7 @@ Table of Contents
 
 ## [ROS 2](ros2.md)
 
+- [Cancel action goal from CLI](ros2.md#cancel-action-goal-from-cli)
 - [`colcon`](ros2.md#colcon)
 - [Migrate signing key](ros2.md@migrate.signing-key)
 - [Publish static transform on the fly](ros2.md#publish-static-transform-on-the-fly)
