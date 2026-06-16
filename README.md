@@ -118,6 +118,8 @@ Table of Contents
 
 ## [Vim](vim.md)
 
+- [Delete lines containing a specific pattern](vim.md#delete-lines-containing-a-specific-pattern)
+- [Delete lines NOT containing a specific pattern](vim.md#delete-lines-not-containing-a-specific-pattern)
 - [Enable backup, undo, swap](vim.md#vim-enable-backup-undo-swap)
 - [Replace text and preserve case](vim.md#replace-text-and-preserve-case)
 

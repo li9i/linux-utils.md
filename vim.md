@@ -1,5 +1,19 @@
 [.vimrc](https://github.com/li9i/dotfiles/blob/master/.vimrc)
 
+# D
+
+## Delete lines containing a specific pattern
+
+```vim
+:g/pattern/d
+```
+
+## Delete lines NOT containing a specific pattern
+
+```vim
+:g!/pattern/d
+```
+
 # E
 
 ## Enable backup, undo, swap
