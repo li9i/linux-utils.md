@@ -81,6 +81,9 @@ Table of Contents
   - [Add stuff to](git.md#add-stuff-to)
   - [Migrate existing files to LFS (e.g. large files already committed)](git.md#migrate-existing-files-to-LFS-eg-large-files-already-committed)
   - [Remove commit-unreferenced stuff from](git.md#remove-commit-unreferenced-stuff-from)
+- modify
+  - [Modify commit message](git.md#modify-commit-message)
+  - [Modify commit content](git.md#modify-commit-content)
 - `merge`
   - [Merge branch but don't commit changes yet](git.md#merge-branch-but-dont-commit-changes-yet)
 - squash

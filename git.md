@@ -218,6 +218,30 @@ git reset
 
 Then you may keep the files that you need and discard the rest.
 
+## Modify commit message
+
+Assume you want to modify the message or the description of commit `<commit-sha>`. Use
+
+```bash
+git rebase -i <commit-sha>~1
+```
+
+and mark the commit you want to change with `reword` or `r`. Close the editor; a new editor with the commit message and description will open.
+
+## Modify commit content
+
+Assume you want to modify the content of commit `<commit-sha>`. Use
+
+```bash
+git rebase -i <commit-sha>~1
+```
+
+and mark the commit you want to change with `edit` or `e`. Close the editor. Then modify the files you want. Then
+
+1. `git add <modified-files>`
+2. git commit --amend
+3. git rebase --continue
+
 # P
 
 ## Push by specifying key location
