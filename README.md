@@ -31,6 +31,11 @@ Table of Contents
 - [Exchange files (python)](between-two-computers.md#file-exchange-lightweight)
 - [Exchange files (copyparty)](between-two-computers.md#file-exchange-heavyweight)
 
+## [Claude](claude.md)
+
+  -  [Access session from another directory](claude.md#access-session-from-another-directory)
+  -  [Move session from one directory to another](claude.md#move-session-from-one-directory-to-another)
+
 ## [Docker](docker.md)
 
 - [Cleanup unnecessary space](docker.md#cleanup-unnecessary-space)
