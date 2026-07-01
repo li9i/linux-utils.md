@@ -9,6 +9,8 @@
   docker volume ls -f dangling=true | awk 'NR > 1 {print $2}' | xargs docker volume rm
 ```
 
+---
+
 # K
 
 ## Kill running containers
@@ -19,6 +21,8 @@ docker container kill $running_containers
 docker container rm   $running_containers
 ```
 
+---
+
 # R
 
 ## Reboot Docker
@@ -26,6 +30,8 @@ docker container rm   $running_containers
 ```bash
   sudo systemctl daemon-reload && sudo systemctl restart docker
 ```
+
+---
 
 # V
 

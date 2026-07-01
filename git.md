@@ -8,6 +8,8 @@ If you need to `add` everything except untracked files, i.e. only update changes
 git add -u # --update
 ```
 
+---
+
 # C
 
 ## Configuration of keys for different repos
@@ -73,6 +75,8 @@ git am /path/to/0001-xxx.patch
 
 If the patch doesn't apply cleanly, you can try `git am -3` (three-way merge) or fall back to `git apply --reject` and fix things manually.
 
+---
+
 # D
 
 ## `diff` different files across different branches
@@ -80,6 +84,8 @@ If the patch doesn't apply cleanly, you can try `git am -3` (three-way merge) or
 ```bash
 git diff main:src/file_a.txt feature:src/folder/file_b.txt
 ```
+
+---
 
 # F
 
@@ -129,6 +135,8 @@ git add <forgotten-files>
 git commit --amend
 ```
 
+---
+
 # H
 
 ## Hooks
@@ -146,6 +154,8 @@ pre-commit install
 ```bash
 pre-commit run -a
 ```
+
+---
 
 # L
 
@@ -189,6 +199,8 @@ If you add the following to `~/.gitconfig` then issuing `git changed-files` will
 [alias]
     changed-files = "!git status --porcelain | awk '{print $2}'"
 ```
+
+---
 
 # M
 
@@ -242,6 +254,8 @@ and mark the commit you want to change with `edit` or `e`. Close the editor. The
 2. git commit --amend
 3. git rebase --continue
 
+---
+
 # P
 
 ## Push by specifying key location
@@ -253,6 +267,8 @@ GIT_SSH_COMMAND='ssh -i /path/to/private_key' git push origin main
 ## Force-push but prevent accidental overwrite
 
 > `--force-with-lease` is safer than `--force` as it will refuse to push if someone else has pushed to the branch in the meantime, thus preventing you from accidentally overwriting their work
+
+---
 
 # R
 
@@ -382,6 +398,8 @@ git revert --no-commit COMMIT_HASH_n COMMIT_HASH_n-1 ... COMMIT_HASH_n-k
 git commit -m "Revert specific commits"
 ```
 
+---
+
 # S
 
 ## Squash one branch to a single commit; then place it in a branch
@@ -496,8 +514,6 @@ You can now replace `my-branch` with `my-branch-squashed`
 git rebase master
 ```
 
----
-
 If you prefer to rewrite history then do an interactive rebase on `my-branch` first:
 
 Checkout `my-branch`
@@ -525,6 +541,8 @@ git checkout master
 git merge --ff-only `my-branch`
 ```
 
+---
+
 # T
 
 ## Take back last commit but keep changes unstaged for further processing
@@ -539,6 +557,8 @@ git reset HEAD~1
 
 Use `--force-with-lease` if B was pushed.
 
+---
+
 # U
 
 ## Unstage everything after `add`
@@ -546,6 +566,8 @@ Use `--force-with-lease` if B was pushed.
 ```bash
 git reset
 ```
+
+---
 
 # V
 
@@ -583,6 +605,8 @@ git diff --word-diff
 ```bash
 git ls-files --others --ignored --exclude-standard
 ```
+
+---
 
 # W
 

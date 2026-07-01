@@ -55,6 +55,8 @@ sudo apt install iptables-persistent -y
 sudo iptables-save | sudo tee /etc/iptables/rules.v4
 ```
 
+---
+
 # D
 
 ## Discover others in subnet
@@ -65,6 +67,8 @@ Say you sit at a pc with IP address `192.168.0.200` and you need to identify whi
 # Scan the entire subnet, i.e. look under 192.168.0.1--192.168.0.255
 nmap -sn 192.168.0.0/24
 ```
+
+---
 
 # F
 

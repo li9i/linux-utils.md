@@ -13,6 +13,8 @@ Generate `n=5` passwords
 - `E`xclude ambiguous chars
 - `M`ix `S`pecial chars, `N`umbers, `C`apital letters, `L`owercase letters
 
+---
+
 # R
 
 ## Run something once on boot
@@ -27,6 +29,8 @@ e.g. restart Docker container abc 10 sec after boot
 # @reboot applies to both `shutdown -h` and `-r`
 @reboot sleep 10; docker container restart abc
 ```
+
+---
 
 # S
 

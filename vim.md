@@ -14,6 +14,8 @@
 :g!/pattern/d
 ```
 
+---
+
 # E
 
 ## Enable backup, undo, swap
@@ -42,6 +44,8 @@ set directory=~/.vim/swap//
 set undofile
 set undodir=~/.vim/undo//
 ```
+
+---
 
 # R
 

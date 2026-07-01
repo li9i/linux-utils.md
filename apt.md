@@ -12,6 +12,8 @@ zcat -f /var/log/dpkg.log* 2>/dev/null | grep " install " | awk '{print $1, $2, 
 apt-mark showmanual
 ```
 
+---
+
 # S
 
 ## Split `apt-get install` to `download` stage and `install` stage

@@ -77,6 +77,8 @@ cd build/project_name
 make help
 ```
 
+---
+
 # M
 
 ## Migrate signing key
@@ -90,6 +92,8 @@ sudo rm /usr/share/keyrings/ros-archive-keyring.gpg
 
 source: https://discourse.openrobotics.org/t/ros-signing-key-migration-guide/43937#p-93537-how-do-i-migrate-after-june-1st-4
 
+---
+
 # P
 
 ## Publish static transform on the fly
@@ -97,6 +101,8 @@ source: https://discourse.openrobotics.org/t/ros-signing-key-migration-guide/439
 ```bash
 ros2 run tf2_ros static_transform_publisher X Y Z ROLL PITCH YAW PARENT_FRAME CHILD_FRAME
 ```
+
+---
 
 # R
 
@@ -683,6 +689,8 @@ type the new version number, e.g.
   [':{auto}']: 0.0.2
 ```
 
+---
+
 # S
 
 ## Save map published at custom topic
@@ -697,6 +705,8 @@ or, thoroughly:
 ```bash
 ros2 run nav2_map_server map_saver_cli -f $MAP_SAVE_FILEPATH -t MAP_TOPIC_TO_SAVE --occ 0.65 --free 0.196 --ros-args -p map_subscribe_transient_local:=true
 ```
+
+---
 
 # T
 
