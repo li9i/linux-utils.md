@@ -85,3 +85,17 @@ cd ~/.vim/pack/tpope/start
 git clone https://tpope.io/vim/abolish.git
 vim -u NONE -c "helptags abolish/doc" -c q
 ```
+
+---
+
+# U
+
+## Unwrap lines
+
+> With `gq` you wrap a paragraph; how do you unwrap it?
+
+The fastest, most idiomatic way to unwrap a paragraph back into a single long line is:
+
+```vim
+vipJ
+```

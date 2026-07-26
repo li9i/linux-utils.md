@@ -161,6 +161,8 @@ Table of Contents
 - [Enable backup, undo, swap](vim.md#enable-backup-undo-swap)
 - [Join all lines](vim.md#join-all-lines)
 - [Replace text and preserve case](vim.md#replace-text-and-preserve-case)
+- [Unwrap lines](vim.md#unwrap-lines)
+
 
 ## [YouTube](youtube.md)
 
