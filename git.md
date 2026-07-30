@@ -38,6 +38,24 @@ If you need to `add` everything except untracked files, i.e. only update changes
 git add -u # --update
 ```
 
+## Added directory with its own `.git`?
+
+What you're seeing is a **gitlink** — when you ran `git add .`, Git recorded that directory as mode `160000` (a submodule pointer) instead of its contents. Deleting the inner `.git` doesn't update that index entry, so `git add` leaves it alone.
+
+Confirm it first:
+
+```bash
+git ls-files -s path/to/dir
+```
+
+If the mode is `160000`, drop the entry and re-add:
+
+```bash
+git rm --cached  path/to/dir     # add -r and/or -f if it complains
+git add          path/to/dir
+git ls-files -s  path/to/dir     # should now list files with mode 100644
+```
+
 ## Forgot to add file(s) to latest commit and realised before pushing?
 
 Don't worry. You can add the file(s) to the latest commit with

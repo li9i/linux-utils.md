@@ -60,6 +60,7 @@ Table of Contents
   - [Configuration of keys for different repos](git.md#configuration-of-keys-for-different-repos)
 - `add`
   - [Add everything except untracked files](git.md#add-everything-except-untracked-files)
+  - [Added directory with its own `.git`?](git.md#added-directory-with-its-own-git)
   - [Forgot to add file(s) to latest commit before pushing](git.md#forgot-to-add-files-to-latest-commit-and-realised-before-pushing)
 - `checkout`
   - [Cherry-pick a file from another branch](git.md#checkout-as-means-of-cherry-picking-file-from-another-branch)
