@@ -108,6 +108,7 @@ Table of Contents
   - [Unstage everything after `add`](git.md#unstage-everything-after-add)
 - `revert`
   - [Remove changes introduced by commit](git.md#remove-changes-introduced-by-commit)
+  - [Revert a commit's changes to only one of its files](git.md#revert-a-commits-changes-to-only-one-of-its-files)
   - [Revert multiple commits in one commit](git.md#revert-multiple-commits-in-one-commit)
 - `squash`
   - [Squash one branch to a single commit; then place it in a branch](git.md#squash-one-branch-to-a-single-commit-then-place-it-in-a-branch)

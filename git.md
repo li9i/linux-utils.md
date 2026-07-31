@@ -600,6 +600,27 @@ Locate the commit you want to remove in the editor. Then change the word `pick` 
 git rebase --continue
 ```
 
+## Revert a commit's changes to only one of its files
+
+Commit `<sha>` touched several files; you want to undo what it did to just one.
+
+**Rewrite it in place** (fine on your own branch, even if pushed):
+
+```bash
+git rebase -i <sha>~1
+```
+
+Mark `<sha>` with `edit`, close the editor, then
+
+```bash
+git restore --source=<sha>~1 --staged --worktree -- path/to/file
+git commit --amend --no-edit
+git rebase --continue
+git push --force-with-lease
+```
+
+Add `--update-refs` to the rebase if branches are stacked on top.
+
 ## Revert multiple commits in one commit
 
 ### Commits are sequential
