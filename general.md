@@ -34,6 +34,40 @@ e.g. restart Docker container abc 10 sec after boot
 
 # S
 
+## Steghide
+
+### Embed Secret Data into an Image
+To hide a text file (`secret.txt`) inside a cover image (`cover.jpg`):
+
+```bash
+steghide embed -cf cover.jpg -ef secret.txt
+```
+where
+```
+-cf (cover file): The original image or audio file.
+-ef (embed file): The secret payload file you want to hide.
+```
+
+### Extract Hidden Data
+
+To extract the embedded file from the stego image:
+
+```bash
+steghide extract -sf cover.jpg
+```
+where
+```
+-sf (stego file): The image/audio file containing the hidden data.
+```
+
+### Useful Optional Flags
+
+| Flag | Description | Example |
+| --- | --- | --- |
+| `-p` | Pass passphrase directly in command line | `steghide embed -cf cover.jpg -ef secret.txt -p "MyPassword123"` |
+| `-e` | Specify encryption algorithm (e.g., `aes-256`, `blowfish`) | `steghide embed -cf cover.jpg -ef secret.txt -e aes-256` |
+| `-z` | Specify compression level (1–9; `0` disables compression) | `steghide embed -cf cover.jpg -ef secret.txt -z 9` |
+
 ## Suppress lines of output on command line
 
 Say you run a command which yields lines that clutter your overview of the output, e.g.

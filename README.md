@@ -53,6 +53,7 @@ Table of Contents
 
 - [Generate Passwords](general.md#generate-passwords)
 - [Run something once on boot](general.md#run-something-once-on-boot)
+- [Steghide](general.md#steghide)
 - [Suppress lines of output on command line](general.md#suppress-lines-of-output-on-command-line)
 
 ## [`git`](git.md)
