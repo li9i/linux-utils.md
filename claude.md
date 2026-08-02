@@ -18,6 +18,16 @@
 
 ---
 
+# C
+
+## Caveman
+
+### Change default caveman configuration
+
+`caveman` resolves default from `~/.config/caveman/config.json`. (That path may be a symlink to `~/.claude/caveman-config.json`)
+
+---
+
 # M
 
 ## Move session from one directory to another

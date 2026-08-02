@@ -37,6 +37,7 @@ Table of Contents
 
   -  [Access session from another directory](claude.md#access-session-from-another-directory)
   -  [Branch conversation](claude.md#branch-conversation)
+  -  [Change default `caveman` configuration](claude.md@change-default-caveman-configuration)
   -  [Move session from one directory to another](claude.md#move-session-from-one-directory-to-another)
   -  [Update](claude.md#update)
 
