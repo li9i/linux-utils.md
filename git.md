@@ -1072,6 +1072,20 @@ git range-diff @{u}...HEAD   # optional, compare old vs new test branch
 
 # `.gitignore`
 
+## Hide changes to a tracked file locally without adding it to .gitignore or affecting other people
+
+Use `assume-unchanged` or `skip-worktree`:
+
+```bash
+git update-index --assume-unchanged  path/to/file
+```
+
+This tells git to stop noticing changes to that file for you, without touching `.gitignore` or other collaborators. Reverse it with:
+
+```bash
+git update-index --no-assume-unchanged  path/to/file
+```
+
 ## Start ignoring tracked file
 
 Adding a file to `.gitignore` alone doesn't work, because git only checks ignore rules for untracked files. You need to explicitly remove it from tracking first:
