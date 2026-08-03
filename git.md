@@ -1069,3 +1069,26 @@ Verify only test commits replayed, no `-src` duplicates:
 git log --oneline feature/movex-xyz-src..feature/movex-xyz-test
 git range-diff @{u}...HEAD   # optional, compare old vs new test branch
 ```
+
+# `.gitignore`
+
+## Start ignoring tracked file
+
+Adding a file to `.gitignore` alone doesn't work, because git only checks ignore rules for untracked files. You need to explicitly remove it from tracking first:
+
+```bash
+git rm --cached  path/to/file
+```
+
+Then add it to .gitignore:
+
+```bash
+# head .gitignore -n 1
+path/to/file
+```
+
+Commit the removal:
+
+```bash
+git commit -m "Stop tracking file + add to .gitignore"
+```

@@ -133,6 +133,8 @@ Table of Contents
     - [If it's a new commit rather than an amend](git.md#if-its-a-new-commit-rather-than-an-amend)
     - [If you're editing a commit that already exists in `feature-a`](git.md#if-youre-editing-a-commit-that-already-exists-in-feature-a)
     - [If you squash commits / reword messages](git.md#if-you-squash-commits--reword-messages)
+- `.gitignore`
+  - [Start ignoring tracked file](git.md#start-ignoring-tracked-file)
 
 ## [ROS 2](ros2.md)
 
