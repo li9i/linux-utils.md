@@ -51,6 +51,8 @@ Table of Contents
 
 ## [General](general.md)
 
+- [Caja](general.md#caja)
+  - [Open terminal in this directory keyboard shortcut](general.md#open-terminal-in-this-directory-keyboard-shortcut)
 - [Generate Passwords](general.md#generate-passwords)
 - [Run something once on boot](general.md#run-something-once-on-boot)
 - [Steghide](general.md#steghide)

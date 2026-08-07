@@ -1,3 +1,26 @@
+# C
+
+## Caja
+
+### Open terminal in this directory keyboard shortcut
+
+Open
+
+```bash
+~/.config/caja/accels
+```
+
+and add or set the following:
+
+```
+(gtk_accel_path "<Actions>/ExtensionsMenuGroup/CajaOpenTerminal::open_terminal" "F4")
+```
+
+Apparently
+
+> [F4 is T]he convention in Nautilus, Thunar and Dolphin.
+
+
 # P
 
 ## Generate passwords
