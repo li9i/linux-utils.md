@@ -28,6 +28,23 @@
 
 ---
 
+# F
+
+## Fork prompt
+
+>  `/fork [prompt]` "Copy this conversation into a new background session and keep working here"
+>
+>  - You stay exactly where you are. Nothing changes in this conversation.
+>  - A new session is created, seeded with a copy of the transcript up to the fork point, named `<title> (forked)`.
+>  - It runs in the background. Give it a prompt and it starts on that task immediately. Give none and it sits idle.
+>  - Isolation is two way. Its work never lands here, and it never sees what you do here after the fork point.
+>  - You can talk to it. It appears in the agent roster, so `SendMessage` works in both directions.
+>  - Refused if the session cannot be copied faithfully: persistence off, `--safe-mode`, `--bare`, custom system prompt, tool allowlist, restricted settings.
+
+So: fork gives you two live sessions and you keep this one. Branch gives you one live session and you leave this one behind, recoverable by id.
+
+---
+
 # M
 
 ## Move session from one directory to another
