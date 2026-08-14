@@ -55,6 +55,7 @@ Table of Contents
 - [Caja](general.md#caja)
   - [Open terminal in this directory keyboard shortcut](general.md#open-terminal-in-this-directory-keyboard-shortcut)
 - [Generate Passwords](general.md#generate-passwords)
+- [Publish a package to a Launchpad PPA](general.md#publish-a-package-to-a-launchpad-ppa)
 - [Run something once on boot](general.md#run-something-once-on-boot)
 - [Steghide](general.md#steghide)
 - [Suppress lines of output on command line](general.md#suppress-lines-of-output-on-command-line)
