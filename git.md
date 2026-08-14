@@ -317,6 +317,59 @@ git add <conflicted-file>   # usually automatic after mergetool, but check git s
 git commit
 ```
 
+In detail:
+
+### The 3-Pane Layout Breakdown
+
+```
++------------------+------------------+------------------+
+|    LEFT PANE     |   MIDDLE PANE    |    RIGHT PANE    |
+|   LOCAL (Ours)   |  BASE / MERGED   |  REMOTE (Theirs) |
++------------------+------------------+------------------+
+```
+
+#### 1. Left Pane: **`LOCAL` ("Ours")**
+
+* **What it is:** Your local version.
+* **Content:** Contains the changes **you** made on your machine after cloning.
+* **Mode:** Read-only.
+
+#### 2. Middle Pane: **`BASE` / `MERGED` (The Target File)**
+
+* **What it is:** The working resolution file.
+* **Content:** By default, it shows the **BASE** version (the common ancestor file from when you first cloned/branched) or Git's draft merge result.
+* **Mode:** **Editable.** This is where the final merged result is built.
+
+#### 3. Right Pane: **`REMOTE` ("Theirs")**
+
+* **What it is:** The incoming version.
+* **Content:** Contains the changes committed and pushed by your teammate.
+* **Mode:** Read-only.
+
+### How to Work in Meld
+
+1. **Compare Changes:**
+* Look at the **Left** pane to see what you modified relative to the Middle base.
+* Look at the **Right** pane to see what your teammate modified relative to the Middle base.
+
+
+2. **Apply Changes to the Middle Pane:**
+* Click the **▶ (Right Arrow)** between the Left and Middle panes to push **your** changes into the result.
+* Click the **◀ (Left Arrow)** between the Right and Middle panes to pull **their** changes into the result.
+* Manually edit the **Middle pane** directly if you need to combine logic from both sides.
+
+
+3. **Save & Finish:**
+* Save the **Middle pane** (`Ctrl + S`).
+* Close Meld. Git will take the saved middle pane as the resolved conflict and mark the file as ready to stage.
+
+
+> [!TIP]
+> If you want Meld to automatically resolve simple, non-conflicting lines so you only have to focus on actual conflicts in the middle pane, enable auto-merge in Git:
+>
+> ```bash
+> git config --global mergetool.meld.useAutoMerge true
+> ```
 ## What is `merge-base` ?
 
 `git merge-base` finds the best common ancestor of two (or more) commits — the commit where the branches diverged. Given two branches, it walks back through history and reports the most recent commit reachable from both.
