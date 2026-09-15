@@ -138,7 +138,7 @@ Table of Contents
     - [If you're editing a commit that already exists in `feature-a`](git.md#if-youre-editing-a-commit-that-already-exists-in-feature-a)
     - [If you squash commits / reword messages](git.md#if-you-squash-commits--reword-messages)
 - `.gitignore`
-  - [Hide changes to a tracked file locally without adding it to .gitignore or affecting other people](git.md#hide-changes-to-a-tracked-file-locally-without-adding-it-to-gitignore-or-affecting-other people)
+  - [Hide changes to a tracked file locally without adding it to .gitignore or affecting other people](git.md#hide-changes-to-a-tracked-file-locally-without-adding-it-to-gitignore-or-affecting-other-people)
   - [Start ignoring tracked file](git.md#start-ignoring-tracked-file)
 
 ## [ROS 2](ros2.md)
