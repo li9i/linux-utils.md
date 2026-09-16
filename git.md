@@ -1071,6 +1071,25 @@ Now `feature-b` and `feature-c` are replayed on top of `feature-a`'s new tip, an
 
 ### If you're editing a commit that already exists in `feature-a`
 
+#### View diff and edit With meld
+
+```bash
+git checkout feature-c      # top of the stack
+git rebase -i <commit>^     # mark that commit 'edit'; save then close
+git difftool -d HEAD^       # right pane is the working tree now, so edits stick
+git add <paths>
+git commit --amend
+git rebase --continue
+```
+
+then
+
+```bash
+git rebase -i --update-refs main
+```
+
+#### Edit file directly
+
 Do an interactive rebase from the base while sitting on the top branch:
 
 ```bash
