@@ -1071,7 +1071,7 @@ Now `feature-b` and `feature-c` are replayed on top of `feature-a`'s new tip, an
 
 ### If you're editing a commit that already exists in `feature-a`
 
-#### View diff and edit With meld
+#### View diff and edit with `meld`
 
 ```bash
 git checkout feature-c      # top of the stack
@@ -1085,8 +1085,9 @@ git rebase --continue
 then
 
 ```bash
-git rebase -i --update-refs main
+git rebase --onto feature/movex-xyz-src <OLD-src-tip> feature/movex-xyz-test --update-refs
 ```
+(see [If you squash commits / reword messages](#if-you-squash-commits--reword-messages))
 
 #### Edit file directly
 
