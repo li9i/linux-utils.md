@@ -1089,8 +1089,10 @@ git push --force-with-lease origin feature-a feature-b feature-c
 
 ### If you squash commits / reword messages
 
+Assume you did a `rebase -i <commit-sha>~1` to reword a commit's message. Assume that commit belongs to `feature/movex-xyz-src`, either as its tip or the tip's ancestor. If you want to restack later branches then issue
+
 ```bash
-git rebase --onto feature/movex-xyz-src <OLD-src-tip> feature/movex-xyz-test
+git rebase --onto feature/movex-xyz-src <OLD-src-tip> feature/movex-xyz-test --update-refs
 ```
 
 Three arguments to `git rebase --onto`:
