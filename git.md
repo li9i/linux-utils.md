@@ -870,7 +870,7 @@ git stash push path/to/file1 path/to/file2
 
 # `worktree`
 
-## Worktrees
+## Worktrees: examples
 
 > You are in the middle of working and your boss comes in and demands that you fix something immediately. You might typically use `git stash` to store your changes away temporarily, however, you don’t want to risk disturbing any of it. Instead, you create a temporary linked worktree to make the emergency fix, remove it when done, and then resume your work.
 
@@ -884,6 +884,39 @@ git worktree remove ../temp
 ```
 
 > source: https://git-scm.com/docs/git-worktree#_examples
+
+## Worktrees: working on two things at the same time in the same repository
+
+> Lets say I'm on one branch in git. I want to work two features at the same time. Can I create two worktrees off the same branch? What's the workflow?
+
+Yes, with one catch: git won't let the same branch be checked out in two worktrees at once. Instead, create two new branches off your current branch, one per worktree.
+
+**Setup** (from your main checkout, on `base-branch`):
+
+```bash
+git worktree add ../myrepo-feat-a -b feat-a base-branch
+git worktree add ../myrepo-feat-b -b feat-b base-branch
+```
+
+**Work:** Open a terminal in each directory and run `claude` there. Each session sees only its own working tree, so the two features don't interfere.
+
+**Bring it back:** Merge or rebase each feature branch into `base-branch` when done, or open them as separate PRs against it. (If feat-b ends up depending on feat-a, rebase feat-b onto feat-a and treat them as a stack.)
+
+**Clean up:**
+
+```bash
+git worktree remove ../myrepo-feat-a
+git branch -d feat-a
+git worktree prune   # if you deleted a directory by hand
+```
+
+A few things to watch for:
+
+- **Builds aren't shared in ROS 2.** Each worktree needs its own `colcon build`, with its own `build/`, `install/`, and `log/`. Source the right `install/setup.bash` in each terminal.
+- **Running ROS 2 nodes at the same time.** If you test both features at once, set a different `ROS_DOMAIN_ID` per terminal so the topics and actions don't cross-talk.
+- **Untracked local files** like `.env`, local configs, or `CLAUDE.local.md` aren't copied into new worktrees. Copy them over if you need them.
+- **Overlapping edits.** If both features touch the same files, expect conflicts at merge time.
+
 
 ---
 
