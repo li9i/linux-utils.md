@@ -62,6 +62,48 @@ ggVGJ  " visually select the whole file, then J to join.
 
 ---
 
+# P
+
+## Paste clipboard content into the command line
+
+When typing an ex command (e.g. `:w` and a path), it is possible to paste the path from the clipboard directly into the command line.
+
+### Method 1: `Ctrl-R` then `+` or `*`
+
+1. Type `:w ` (example usage)
+2. Press `Ctrl-R` then `+` to paste from the system clipboard, or
+   Press `Ctrl-R` then `*` to paste from the X11 primary selection
+3. Press `Enter`
+
+In other words the sequence is
+
+```
+:w <Ctrl-R>+<Enter>
+```
+
+### Method 2: `Ctrl-R Ctrl-O +` (paste literally)
+
+If the clipboard contains special characters (like `%` which Vim would expand), use:
+
+```
+:w <Ctrl-R><Ctrl-O>+
+```
+
+This inserts the register content **literally**, without interpreting it as Vim keycodes.
+
+> [!NOTE]
+> Make sure Vim was compiled with clipboard support:
+>
+> ```vim
+> :echo has('clipboard')
+> ```
+>
+> Should return `1`. If it returns `0`, you either need `vim-gtk3` (Debian/Ubuntu) or `vim` with `+clipboard`.
+>
+> `+` is the system clipboard register, `*` is the X11 primary selection (middle-mouse).
+
+---
+
 # R
 
 ## Replace text and preserve case
