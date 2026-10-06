@@ -171,6 +171,7 @@ Table of Contents
 - [Delete lines NOT containing a specific pattern](vim.md#delete-lines-not-containing-a-specific-pattern)
 - [Enable backup, undo, swap](vim.md#enable-backup-undo-swap)
 - [Join all lines](vim.md#join-all-lines)
+- [Paste clipboard content into the command line](#paste-clipboard-content-into-the-command-line)
 - [Replace text and preserve case](vim.md#replace-text-and-preserve-case)
 - [Unwrap lines](vim.md#unwrap-lines)
 
