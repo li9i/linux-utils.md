@@ -917,6 +917,133 @@ A few things to watch for:
 - **Untracked local files** like `.env`, local configs, or `CLAUDE.local.md` aren't copied into new worktrees. Copy them over if you need them.
 - **Overlapping edits.** If both features touch the same files, expect conflicts at merge time.
 
+## Worktrees: `git retouch` a stack while other sessions work in the main folder
+
+> Other Claude sessions are working in the main folder, on the top branch of a stack. I want to change a branch lower down with `git retouch`, without touching their files.
+
+`git retouch` is the custom command in `dotfiles/git/.local/bin/git-retouch` (`git retouch -h` prints its usage). The stack in the examples:
+
+```
+main -> feature-a -> feature-b -> feature-c
+```
+
+`feature-c` is the top branch, open in the main folder. `feature-a` is the branch to change.
+
+### Two rules that shape everything
+
+- **One branch, one folder.** Git refuses to open a branch that another folder holds. `git worktree list` shows who holds what: a branch in `[brackets]` is held.
+
+  ```
+  $ git worktree add ../x feature-c
+  fatal: 'feature-c' is already used by worktree at '/path/to/main-folder'
+  ```
+
+- **A rebase never moves a held branch.** `--update-refs` moves every other branch in the range and skips the held one. So `feature-c` always stays behind, and you move it last, from the main folder.
+
+### Pick the form of `git retouch`
+
+| You want | Command | What happens to history |
+|---|---|---|
+| a correction on top of one branch | `git retouch feature-a` | Kept. One new commit, `Retouch feature-a against main`, goes on top of `feature-a`. |
+| to change the commits themselves | `git retouch <commit>` or `git retouch <old>..<new>` | Rewritten. Each commit opens in meld and is amended in place. |
+
+The branch form makes its own side folder (`.git/retouch-tree`) when you name a branch you are not on, and removes it at the end. The commit and range forms rebase the folder you run them in, so they need a side folder that you make by hand.
+
+### Steps
+
+**1. Tag every tip.** Tags never move in a rebase, so they are your undo button. Use tags, not backup branches. `--update-refs` drags along any branch that points into the stack, backups included, and `git retouch` can pick a backup branch as the base of a branch.
+
+```bash
+for b in $(git branch --format='%(refname:short)' --list 'feature*'); do
+  git tag "pre-retouch/$b" "$b"
+done
+```
+
+To undo one branch later: `git branch -f feature-a pre-retouch/feature-a`.
+
+**2. Make a side folder, detached at the top of the stack.** Detached means it holds no branch, so it works even though the main folder holds `feature-c`.
+
+```bash
+git worktree add --detach .claude/worktrees/retouch feature-c
+```
+
+Keep it inside the repository when a dev container must see it at the same path. In ngp-movex `.claude/` is ignored, so the folder never shows up as untracked in the main folder.
+
+**3a. A correction on top of one branch.** Run this from the main folder. `git retouch` opens `feature-a` in a side folder of its own, so the files in the main folder stay as they are.
+
+```bash
+git retouch feature-a
+```
+
+Meld opens with the base on the left and the branch on the right. Edit the right side and close meld. Read what is staged with `git diff --cached`, then make the new commit:
+
+```bash
+git retouch --continue
+```
+
+Now bring `feature-b` along, from your side folder:
+
+```bash
+cd .claude/worktrees/retouch
+git rebase --update-refs --onto feature-a pre-retouch/feature-a
+```
+
+Read it as: "take everything above the old `feature-a` and put it on the new one".
+
+**3b. Change the commits themselves.** Run this from your side folder:
+
+```bash
+cd .claude/worktrees/retouch
+git -c rebase.updateRefs=true retouch <commit>
+```
+
+`git retouch` does not pass `--update-refs` itself. It follows `rebase.updateRefs`, which the host's `~/.gitconfig` sets to true and the dev container leaves unset. `-c` sets it for this one run in both places, and git hands it on to the rebase that `git retouch` starts.
+
+At each stop meld opens the commit against its parent. Edit the right side, close meld, read `git diff --cached`, then run `git retouch --continue`. After the last stop it prints `retouch finished`, and `feature-a` and `feature-b` sit on the rewritten commits. `git retouch --abort` undoes the whole run at any point.
+
+`git retouch` warns when the span holds a merge commit, because the rebase flattens it. Start above any merge you want to keep.
+
+**4. Move the top branch, from the main folder.** Wait until the session there is idle and has nothing uncommitted. Then:
+
+```bash
+git rebase --onto feature-b pre-retouch/feature-b
+```
+
+This replays only the commits of `feature-c` onto the new `feature-b`, plus anything the other session committed in the meantime. Tell that session that its files may have changed.
+
+**5. Check.**
+
+```bash
+git log --oneline --decorate --graph main..feature-c
+```
+
+Good: one straight line, with each branch name on it once. Bad: a fork, which means a branch stayed on its old commit. Reset that branch from its tag and redo the step.
+
+**6. Clean up** once you are happy:
+
+```bash
+git worktree remove .claude/worktrees/retouch
+git tag -d $(git tag --list 'pre-retouch/*')
+git push --force-with-lease origin feature-a feature-b feature-c
+```
+
+Push from the host. The ngp-movex dev container cannot reach GitHub over SSH.
+
+### To retouch the top branch itself
+
+The main folder holds it. `git retouch feature-c` run there edits the files the other sessions are using, and from any other folder it is refused. Wait for a quiet moment and run it in the main folder.
+
+### While two folders are live
+
+- Never open, move or delete a branch that another session uses.
+- Never use `git stash`. All folders share one stash.
+- Run `git retouch` yourself, on the host, where meld is. A Claude session cannot drive meld.
+- Build and test the side folder inside the dev container, in a clean shell (`env -i`, then source only `/opt/ros/jazzy/setup.bash`), with a `ROS_DOMAIN_ID` other than the main folder's. An inherited shell quietly falls back to the main folder's `install/`.
+
+### Handing the git work to Claude
+
+Start `claude` in the main folder, so it loads the project rules and skills, then tell it to work only in `.claude/worktrees/retouch`. A session started inside the side folder may miss them, because `.claude/` is ignored and the side folder has no copy. Do not use `claude --worktree` here. In ngp-movex it started its folder from `origin/develop`, which has none of the unpushed stack.
+
 
 ---
 
