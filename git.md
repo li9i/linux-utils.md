@@ -900,6 +900,9 @@ git worktree add ../myrepo-feat-b -b feat-b base-branch
 
 **Work:** Open a terminal in each directory and run `claude` there. Each session sees only its own working tree, so the two features don't interfere.
 
+> [!NOTE]
+> In ngp-movex, start `claude` in the main folder instead and tell it which side folder to work in, or it may miss the project rules. See [Worktrees: `git retouch` a stack while other sessions work in the main folder](#worktrees-git-retouch-a-stack-while-other-sessions-work-in-the-main-folder).
+
 **Bring it back:** Merge or rebase each feature branch into `base-branch` when done, or open them as separate PRs against it. (If feat-b ends up depending on feat-a, rebase feat-b onto feat-a and treat them as a stack.)
 
 **Clean up:**
@@ -921,7 +924,7 @@ A few things to watch for:
 
 > Other Claude sessions are working in the main folder, on the top branch of a stack. I want to change a branch lower down with `git retouch`, without touching their files.
 
-`git retouch` is the custom command in `dotfiles/git/.local/bin/git-retouch` (`git retouch -h` prints its usage). The stack in the examples:
+`git retouch` is the custom command in `dotfiles/git/.local/bin/git-retouch`. The stack in the examples:
 
 ```
 main -> feature-a -> feature-b -> feature-c
@@ -1232,6 +1235,8 @@ Now `feature-b` and `feature-c` are replayed on top of `feature-a`'s new tip, an
 ### If you're editing a commit that already exists in `feature-a`
 
 #### View diff and edit with `meld`
+
+`git retouch <commit>` runs these steps for you, one meld window per commit. See [Worktrees: `git retouch` a stack while other sessions work in the main folder](#worktrees-git-retouch-a-stack-while-other-sessions-work-in-the-main-folder). By hand:
 
 ```bash
 git checkout feature-c      # top of the stack
